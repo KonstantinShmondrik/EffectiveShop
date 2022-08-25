@@ -11,7 +11,24 @@
 		00B2665A28B78DA60018D510 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2665928B78DA60018D510 /* SceneDelegate.swift */; };
 		00B2666128B78DA90018D510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B2666028B78DA90018D510 /* Assets.xcassets */; };
 		00B2666428B78DA90018D510 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B2666228B78DA90018D510 /* LaunchScreen.storyboard */; };
+		00B2667A28B794670018D510 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 00B2667928B794670018D510 /* Alamofire */; };
+		00B2667E28B798B10018D510 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2667D28B798B10018D510 /* RequestRouter.swift */; };
+		00B2668028B798D40018D510 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2667F28B798D40018D510 /* ErrorParser.swift */; };
+		00B2668228B798FB0018D510 /* ResponseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2668128B798FB0018D510 /* ResponseCodable.swift */; };
+		00B2668428B7991A0018D510 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2668328B7991A0018D510 /* AbstractRequestFactory.swift */; };
+		00B2668628B799560018D510 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2668528B799560018D510 /* AbstractErrorParser.swift */; };
+		00B2668E28B7998B0018D510 /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2668D28B7998B0018D510 /* ResponseCodableTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00B2668F28B7998B0018D510 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00B2664C28B78DA60018D510 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00B2665328B78DA60018D510;
+			remoteInfo = EffectiveShop;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00B2665428B78DA60018D510 /* EffectiveShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,10 +37,25 @@
 		00B2666028B78DA90018D510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00B2666328B78DA90018D510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00B2666528B78DA90018D510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00B2667D28B798B10018D510 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		00B2667F28B798D40018D510 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
+		00B2668128B798FB0018D510 /* ResponseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
+		00B2668328B7991A0018D510 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
+		00B2668528B799560018D510 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
+		00B2668B28B7998B0018D510 /* EffectiveShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EffectiveShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00B2668D28B7998B0018D510 /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		00B2665128B78DA60018D510 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00B2667A28B794670018D510 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00B2668828B7998B0018D510 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				00B2665628B78DA60018D510 /* EffectiveShop */,
+				00B2668C28B7998B0018D510 /* EffectiveShopTests */,
 				00B2665528B78DA60018D510 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				00B2665428B78DA60018D510 /* EffectiveShop.app */,
+				00B2668B28B7998B0018D510 /* EffectiveShopTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +178,10 @@
 		00B2667528B78EE50018D510 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				00B2667C28B798970018D510 /* Router */,
+				00B2667B28B7987B0018D510 /* Error */,
+				00B2668128B798FB0018D510 /* ResponseCodable.swift */,
+				00B2668328B7991A0018D510 /* AbstractRequestFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -165,6 +203,31 @@
 			path = Environments;
 			sourceTree = "<group>";
 		};
+		00B2667B28B7987B0018D510 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				00B2667F28B798D40018D510 /* ErrorParser.swift */,
+				00B2668528B799560018D510 /* AbstractErrorParser.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		00B2667C28B798970018D510 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				00B2667D28B798B10018D510 /* RequestRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		00B2668C28B7998B0018D510 /* EffectiveShopTests */ = {
+			isa = PBXGroup;
+			children = (
+				00B2668D28B7998B0018D510 /* ResponseCodableTests.swift */,
+			);
+			path = EffectiveShopTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,9 +244,30 @@
 			dependencies = (
 			);
 			name = EffectiveShop;
+			packageProductDependencies = (
+				00B2667928B794670018D510 /* Alamofire */,
+			);
 			productName = EffectiveShop;
 			productReference = 00B2665428B78DA60018D510 /* EffectiveShop.app */;
 			productType = "com.apple.product-type.application";
+		};
+		00B2668A28B7998B0018D510 /* EffectiveShopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00B2669128B7998B0018D510 /* Build configuration list for PBXNativeTarget "EffectiveShopTests" */;
+			buildPhases = (
+				00B2668728B7998B0018D510 /* Sources */,
+				00B2668828B7998B0018D510 /* Frameworks */,
+				00B2668928B7998B0018D510 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00B2669028B7998B0018D510 /* PBXTargetDependency */,
+			);
+			name = EffectiveShopTests;
+			productName = EffectiveShopTests;
+			productReference = 00B2668B28B7998B0018D510 /* EffectiveShopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -198,6 +282,10 @@
 					00B2665328B78DA60018D510 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
+					00B2668A28B7998B0018D510 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 00B2665328B78DA60018D510;
+					};
 				};
 			};
 			buildConfigurationList = 00B2664F28B78DA60018D510 /* Build configuration list for PBXProject "EffectiveShop" */;
@@ -209,11 +297,15 @@
 				Base,
 			);
 			mainGroup = 00B2664B28B78DA60018D510;
+			packageReferences = (
+				00B2667828B794670018D510 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 00B2665528B78DA60018D510 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				00B2665328B78DA60018D510 /* EffectiveShop */,
+				00B2668A28B7998B0018D510 /* EffectiveShopTests */,
 			);
 		};
 /* End PBXProject section */
@@ -228,6 +320,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00B2668928B7998B0018D510 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -236,11 +335,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				00B2665828B78DA60018D510 /* AppDelegate.swift in Sources */,
+				00B2668228B798FB0018D510 /* ResponseCodable.swift in Sources */,
 				00B2665A28B78DA60018D510 /* SceneDelegate.swift in Sources */,
+				00B2668628B799560018D510 /* AbstractErrorParser.swift in Sources */,
+				00B2667E28B798B10018D510 /* RequestRouter.swift in Sources */,
+				00B2668428B7991A0018D510 /* AbstractRequestFactory.swift in Sources */,
+				00B2668028B798D40018D510 /* ErrorParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00B2668728B7998B0018D510 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00B2668E28B7998B0018D510 /* ResponseCodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00B2669028B7998B0018D510 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00B2665328B78DA60018D510 /* EffectiveShop */;
+			targetProxy = 00B2668F28B7998B0018D510 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		00B2666228B78DA90018D510 /* LaunchScreen.storyboard */ = {
@@ -424,6 +544,42 @@
 			};
 			name = Release;
 		};
+		00B2669228B7998B0018D510 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T8K8YS2863;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = KS.EffectiveShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EffectiveShop.app/EffectiveShop";
+			};
+			name = Debug;
+		};
+		00B2669328B7998B0018D510 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T8K8YS2863;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = KS.EffectiveShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EffectiveShop.app/EffectiveShop";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -445,7 +601,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		00B2669128B7998B0018D510 /* Build configuration list for PBXNativeTarget "EffectiveShopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B2669228B7998B0018D510 /* Debug */,
+				00B2669328B7998B0018D510 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		00B2667828B794670018D510 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00B2667928B794670018D510 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00B2667828B794670018D510 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 00B2664C28B78DA60018D510 /* Project object */;
 }
