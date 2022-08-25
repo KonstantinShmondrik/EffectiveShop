@@ -21,6 +21,13 @@
 		00B2669528B79F330018D510 /* MainResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2669428B79F330018D510 /* MainResult.swift */; };
 		00B2669728B79FF40018D510 /* ProductDitailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2669628B79FF40018D510 /* ProductDitailResult.swift */; };
 		00B2669928B7A0830018D510 /* CartResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2669828B7A0830018D510 /* CartResult.swift */; };
+		00B2669C28B7A5810018D510 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2669B28B7A5810018D510 /* Main.swift */; };
+		00B2669E28B7A68B0018D510 /* MainRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2669D28B7A68B0018D510 /* MainRequestFactory.swift */; };
+		00B266A128B7AB850018D510 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266A028B7AB850018D510 /* RequestFactory.swift */; };
+		00B266A428B7B0C50018D510 /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266A328B7B0C50018D510 /* ProductDetails.swift */; };
+		00B266A628B7B0FA0018D510 /* ProductDetailsRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266A528B7B0FA0018D510 /* ProductDetailsRequestFactory.swift */; };
+		00B266A928B7B3AD0018D510 /* MyCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266A828B7B3AD0018D510 /* MyCart.swift */; };
+		00B266AB28B7B4240018D510 /* MyCartRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266AA28B7B4230018D510 /* MyCartRequestFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +57,13 @@
 		00B2669428B79F330018D510 /* MainResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResult.swift; sourceTree = "<group>"; };
 		00B2669628B79FF40018D510 /* ProductDitailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDitailResult.swift; sourceTree = "<group>"; };
 		00B2669828B7A0830018D510 /* CartResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartResult.swift; sourceTree = "<group>"; };
+		00B2669B28B7A5810018D510 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		00B2669D28B7A68B0018D510 /* MainRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRequestFactory.swift; sourceTree = "<group>"; };
+		00B266A028B7AB850018D510 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		00B266A328B7B0C50018D510 /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
+		00B266A528B7B0FA0018D510 /* ProductDetailsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsRequestFactory.swift; sourceTree = "<group>"; };
+		00B266A828B7B3AD0018D510 /* MyCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCart.swift; sourceTree = "<group>"; };
+		00B266AA28B7B4230018D510 /* MyCartRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartRequestFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +146,10 @@
 		00B2666E28B78E460018D510 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				00B2669F28B7AB6D0018D510 /* Request */,
+				00B2669A28B7A5510018D510 /* Main */,
+				00B266A228B7B0970018D510 /* ProductDetails */,
+				00B266A728B7B3880018D510 /* MyCart */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -235,6 +253,41 @@
 				00B2668D28B7998B0018D510 /* ResponseCodableTests.swift */,
 			);
 			path = EffectiveShopTests;
+			sourceTree = "<group>";
+		};
+		00B2669A28B7A5510018D510 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				00B2669B28B7A5810018D510 /* Main.swift */,
+				00B2669D28B7A68B0018D510 /* MainRequestFactory.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		00B2669F28B7AB6D0018D510 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				00B266A028B7AB850018D510 /* RequestFactory.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		00B266A228B7B0970018D510 /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				00B266A328B7B0C50018D510 /* ProductDetails.swift */,
+				00B266A528B7B0FA0018D510 /* ProductDetailsRequestFactory.swift */,
+			);
+			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		00B266A728B7B3880018D510 /* MyCart */ = {
+			isa = PBXGroup;
+			children = (
+				00B266A828B7B3AD0018D510 /* MyCart.swift */,
+				00B266AA28B7B4230018D510 /* MyCartRequestFactory.swift */,
+			);
+			path = MyCart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,12 +397,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				00B2665828B78DA60018D510 /* AppDelegate.swift in Sources */,
+				00B2669E28B7A68B0018D510 /* MainRequestFactory.swift in Sources */,
 				00B2668228B798FB0018D510 /* ResponseCodable.swift in Sources */,
+				00B266A128B7AB850018D510 /* RequestFactory.swift in Sources */,
+				00B2669C28B7A5810018D510 /* Main.swift in Sources */,
 				00B2669528B79F330018D510 /* MainResult.swift in Sources */,
+				00B266A428B7B0C50018D510 /* ProductDetails.swift in Sources */,
+				00B266A928B7B3AD0018D510 /* MyCart.swift in Sources */,
 				00B2665A28B78DA60018D510 /* SceneDelegate.swift in Sources */,
+				00B266A628B7B0FA0018D510 /* ProductDetailsRequestFactory.swift in Sources */,
 				00B2669928B7A0830018D510 /* CartResult.swift in Sources */,
 				00B2668628B799560018D510 /* AbstractErrorParser.swift in Sources */,
 				00B2667E28B798B10018D510 /* RequestRouter.swift in Sources */,
+				00B266AB28B7B4240018D510 /* MyCartRequestFactory.swift in Sources */,
 				00B2669728B79FF40018D510 /* ProductDitailResult.swift in Sources */,
 				00B2668428B7991A0018D510 /* AbstractRequestFactory.swift in Sources */,
 				00B2668028B798D40018D510 /* ErrorParser.swift in Sources */,
