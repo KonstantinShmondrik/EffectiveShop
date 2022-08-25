@@ -18,6 +18,9 @@
 		00B2668428B7991A0018D510 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2668328B7991A0018D510 /* AbstractRequestFactory.swift */; };
 		00B2668628B799560018D510 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2668528B799560018D510 /* AbstractErrorParser.swift */; };
 		00B2668E28B7998B0018D510 /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2668D28B7998B0018D510 /* ResponseCodableTests.swift */; };
+		00B2669528B79F330018D510 /* MainResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2669428B79F330018D510 /* MainResult.swift */; };
+		00B2669728B79FF40018D510 /* ProductDitailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2669628B79FF40018D510 /* ProductDitailResult.swift */; };
+		00B2669928B7A0830018D510 /* CartResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2669828B7A0830018D510 /* CartResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		00B2668528B799560018D510 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		00B2668B28B7998B0018D510 /* EffectiveShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EffectiveShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B2668D28B7998B0018D510 /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
+		00B2669428B79F330018D510 /* MainResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResult.swift; sourceTree = "<group>"; };
+		00B2669628B79FF40018D510 /* ProductDitailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDitailResult.swift; sourceTree = "<group>"; };
+		00B2669828B7A0830018D510 /* CartResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,9 @@
 		00B2666F28B78E710018D510 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				00B2669428B79F330018D510 /* MainResult.swift */,
+				00B2669628B79FF40018D510 /* ProductDitailResult.swift */,
+				00B2669828B7A0830018D510 /* CartResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -336,9 +345,12 @@
 			files = (
 				00B2665828B78DA60018D510 /* AppDelegate.swift in Sources */,
 				00B2668228B798FB0018D510 /* ResponseCodable.swift in Sources */,
+				00B2669528B79F330018D510 /* MainResult.swift in Sources */,
 				00B2665A28B78DA60018D510 /* SceneDelegate.swift in Sources */,
+				00B2669928B7A0830018D510 /* CartResult.swift in Sources */,
 				00B2668628B799560018D510 /* AbstractErrorParser.swift in Sources */,
 				00B2667E28B798B10018D510 /* RequestRouter.swift in Sources */,
+				00B2669728B79FF40018D510 /* ProductDitailResult.swift in Sources */,
 				00B2668428B7991A0018D510 /* AbstractRequestFactory.swift in Sources */,
 				00B2668028B798D40018D510 /* ErrorParser.swift in Sources */,
 			);
