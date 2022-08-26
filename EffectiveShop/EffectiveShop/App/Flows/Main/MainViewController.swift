@@ -12,19 +12,22 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        setNavigationBar()
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Privat func
+    
+    private func setNavigationBar() {
+      
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter"), style: .done, target: self, action: #selector(filterTapped))
+        navigationItem.rightBarButtonItem?.tintColor = AppColor.darkBlue
     }
-    */
+   
+    // MARK: - Actions
+    @objc func filterTapped (sender: UIBarButtonItem) {
+        print("tap filter")
+    }
 
 }

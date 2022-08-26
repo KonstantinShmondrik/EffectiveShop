@@ -15,7 +15,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         UITabBar.appearance().barTintColor = .white
         UITabBar.appearance().unselectedItemTintColor = .white
         UITabBar.appearance().tintColor = .white
-        UITabBar.appearance().backgroundColor = AppColor.DarkBlue
+        UITabBar.appearance().backgroundColor = AppColor.darkBlue
         UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 10, vertical: 10)
        
         
