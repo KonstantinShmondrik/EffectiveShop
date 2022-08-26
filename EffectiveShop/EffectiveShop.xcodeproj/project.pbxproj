@@ -29,6 +29,14 @@
 		00B266A928B7B3AD0018D510 /* MyCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266A828B7B3AD0018D510 /* MyCart.swift */; };
 		00B266AB28B7B4240018D510 /* MyCartRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266AA28B7B4230018D510 /* MyCartRequestFactory.swift */; };
 		00B266AD28B7BFDD0018D510 /* RequestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266AC28B7BFDD0018D510 /* RequestsTests.swift */; };
+		00B266B028B7C85C0018D510 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266AF28B7C85C0018D510 /* TabBarViewController.swift */; };
+		00B266B728B7C9C60018D510 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266B628B7C9C60018D510 /* MainViewController.swift */; };
+		00B266B928B7C9D90018D510 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266B828B7C9D90018D510 /* ProductDetailsViewController.swift */; };
+		00B266BB28B7C9EE0018D510 /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266BA28B7C9EE0018D510 /* MyCartViewController.swift */; };
+		00B266BD28B7CA000018D510 /* FavoritsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266BC28B7CA000018D510 /* FavoritsViewController.swift */; };
+		00B266BF28B7CA170018D510 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266BE28B7CA170018D510 /* UserViewController.swift */; };
+		00B266C128B7CCC30018D510 /* StartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266C028B7CCC30018D510 /* StartManager.swift */; };
+		00B266C428B7E3CC0018D510 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266C328B7E3CC0018D510 /* AppColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +74,14 @@
 		00B266A828B7B3AD0018D510 /* MyCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCart.swift; sourceTree = "<group>"; };
 		00B266AA28B7B4230018D510 /* MyCartRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartRequestFactory.swift; sourceTree = "<group>"; };
 		00B266AC28B7BFDD0018D510 /* RequestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTests.swift; sourceTree = "<group>"; };
+		00B266AF28B7C85C0018D510 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		00B266B628B7C9C60018D510 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		00B266B828B7C9D90018D510 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		00B266BA28B7C9EE0018D510 /* MyCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
+		00B266BC28B7CA000018D510 /* FavoritsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsViewController.swift; sourceTree = "<group>"; };
+		00B266BE28B7CA170018D510 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		00B266C028B7CCC30018D510 /* StartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartManager.swift; sourceTree = "<group>"; };
+		00B266C328B7E3CC0018D510 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +157,7 @@
 		00B2666D28B78E380018D510 /* AppStartManager */ = {
 			isa = PBXGroup;
 			children = (
+				00B266C028B7CCC30018D510 /* StartManager.swift */,
 			);
 			path = AppStartManager;
 			sourceTree = "<group>";
@@ -176,6 +193,12 @@
 		00B2667128B78E9E0018D510 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				00B266AE28B7C7F70018D510 /* TabBarVC */,
+				00B266B128B7C9270018D510 /* Main */,
+				00B266B228B7C9300018D510 /* ProductDetails */,
+				00B266B328B7C9560018D510 /* MyCart */,
+				00B266B428B7C9800018D510 /* Favorits */,
+				00B266B528B7C98B0018D510 /* Usre */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -183,6 +206,7 @@
 		00B2667228B78EB60018D510 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				00B266C228B7E3B20018D510 /* Helpers */,
 				00B2667528B78EE50018D510 /* Network */,
 				00B2667328B78EC80018D510 /* Extensions */,
 				00B2667428B78ED50018D510 /* UIComponents */,
@@ -291,6 +315,62 @@
 				00B266AA28B7B4230018D510 /* MyCartRequestFactory.swift */,
 			);
 			path = MyCart;
+			sourceTree = "<group>";
+		};
+		00B266AE28B7C7F70018D510 /* TabBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				00B266AF28B7C85C0018D510 /* TabBarViewController.swift */,
+			);
+			path = TabBarVC;
+			sourceTree = "<group>";
+		};
+		00B266B128B7C9270018D510 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				00B266B628B7C9C60018D510 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		00B266B228B7C9300018D510 /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				00B266B828B7C9D90018D510 /* ProductDetailsViewController.swift */,
+			);
+			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		00B266B328B7C9560018D510 /* MyCart */ = {
+			isa = PBXGroup;
+			children = (
+				00B266BA28B7C9EE0018D510 /* MyCartViewController.swift */,
+			);
+			path = MyCart;
+			sourceTree = "<group>";
+		};
+		00B266B428B7C9800018D510 /* Favorits */ = {
+			isa = PBXGroup;
+			children = (
+				00B266BC28B7CA000018D510 /* FavoritsViewController.swift */,
+			);
+			path = Favorits;
+			sourceTree = "<group>";
+		};
+		00B266B528B7C98B0018D510 /* Usre */ = {
+			isa = PBXGroup;
+			children = (
+				00B266BE28B7CA170018D510 /* UserViewController.swift */,
+			);
+			path = Usre;
+			sourceTree = "<group>";
+		};
+		00B266C228B7E3B20018D510 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				00B266C328B7E3CC0018D510 /* AppColor.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,7 +482,10 @@
 				00B2665828B78DA60018D510 /* AppDelegate.swift in Sources */,
 				00B2669E28B7A68B0018D510 /* MainRequestFactory.swift in Sources */,
 				00B2668228B798FB0018D510 /* ResponseCodable.swift in Sources */,
+				00B266B928B7C9D90018D510 /* ProductDetailsViewController.swift in Sources */,
 				00B266A128B7AB850018D510 /* RequestFactory.swift in Sources */,
+				00B266B028B7C85C0018D510 /* TabBarViewController.swift in Sources */,
+				00B266B728B7C9C60018D510 /* MainViewController.swift in Sources */,
 				00B2669C28B7A5810018D510 /* Main.swift in Sources */,
 				00B2669528B79F330018D510 /* MainResult.swift in Sources */,
 				00B266A428B7B0C50018D510 /* ProductDetails.swift in Sources */,
@@ -412,9 +495,14 @@
 				00B2669928B7A0830018D510 /* CartResult.swift in Sources */,
 				00B2668628B799560018D510 /* AbstractErrorParser.swift in Sources */,
 				00B2667E28B798B10018D510 /* RequestRouter.swift in Sources */,
+				00B266C428B7E3CC0018D510 /* AppColor.swift in Sources */,
+				00B266BD28B7CA000018D510 /* FavoritsViewController.swift in Sources */,
 				00B266AB28B7B4240018D510 /* MyCartRequestFactory.swift in Sources */,
 				00B2669728B79FF40018D510 /* ProductDitailResult.swift in Sources */,
 				00B2668428B7991A0018D510 /* AbstractRequestFactory.swift in Sources */,
+				00B266BF28B7CA170018D510 /* UserViewController.swift in Sources */,
+				00B266BB28B7C9EE0018D510 /* MyCartViewController.swift in Sources */,
+				00B266C128B7CCC30018D510 /* StartManager.swift in Sources */,
 				00B2668028B798D40018D510 /* ErrorParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
