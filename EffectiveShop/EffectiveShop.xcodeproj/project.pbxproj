@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00564AF628BA2DD700709892 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564AF528BA2DD700709892 /* MainScreenView.swift */; };
+		00564AF828BA30BC00709892 /* UICollectionView+RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564AF728BA30BC00709892 /* UICollectionView+RegisterCell.swift */; };
+		00564AFA28BA323000709892 /* UIView+addSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564AF928BA323000709892 /* UIView+addSubviews.swift */; };
+		00564AFD28BA357500709892 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 00564AFC28BA357500709892 /* SnapKit */; };
+		00564B0028BA375700709892 /* SelectedCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564AFF28BA375700709892 /* SelectedCategoryCollectionViewCell.swift */; };
+		00564B0228BA377000709892 /* HotSalesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B0128BA377000709892 /* HotSalesCollectionViewCell.swift */; };
+		00564B0428BA378700709892 /* BestSellerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B0328BA378700709892 /* BestSellerCollectionViewCell.swift */; };
 		00B2665828B78DA60018D510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2665728B78DA60018D510 /* AppDelegate.swift */; };
 		00B2665A28B78DA60018D510 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2665928B78DA60018D510 /* SceneDelegate.swift */; };
 		00B2666128B78DA90018D510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B2666028B78DA90018D510 /* Assets.xcassets */; };
@@ -30,13 +37,24 @@
 		00B266AB28B7B4240018D510 /* MyCartRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266AA28B7B4230018D510 /* MyCartRequestFactory.swift */; };
 		00B266AD28B7BFDD0018D510 /* RequestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266AC28B7BFDD0018D510 /* RequestsTests.swift */; };
 		00B266B028B7C85C0018D510 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266AF28B7C85C0018D510 /* TabBarViewController.swift */; };
-		00B266B728B7C9C60018D510 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266B628B7C9C60018D510 /* MainViewController.swift */; };
+		00B266B728B7C9C60018D510 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266B628B7C9C60018D510 /* MainScreenViewController.swift */; };
 		00B266B928B7C9D90018D510 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266B828B7C9D90018D510 /* ProductDetailsViewController.swift */; };
 		00B266BB28B7C9EE0018D510 /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266BA28B7C9EE0018D510 /* MyCartViewController.swift */; };
 		00B266BD28B7CA000018D510 /* FavoritsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266BC28B7CA000018D510 /* FavoritsViewController.swift */; };
 		00B266BF28B7CA170018D510 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266BE28B7CA170018D510 /* UserViewController.swift */; };
 		00B266C128B7CCC30018D510 /* StartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266C028B7CCC30018D510 /* StartManager.swift */; };
 		00B266C428B7E3CC0018D510 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266C328B7E3CC0018D510 /* AppColor.swift */; };
+		00B266C728B914620018D510 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266C628B914620018D510 /* AppFont.swift */; };
+		00B266D128B922450018D510 /* MarkPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00B266D028B922450018D510 /* MarkPro-Regular.ttf */; };
+		00B266D228B922450018D510 /* MarkPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00B266D028B922450018D510 /* MarkPro-Regular.ttf */; };
+		00B266D428B922540018D510 /* MarkPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00B266D328B922540018D510 /* MarkPro-Bold.ttf */; };
+		00B266D528B922540018D510 /* MarkPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00B266D328B922540018D510 /* MarkPro-Bold.ttf */; };
+		00B266D728B922600018D510 /* MarkPro-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00B266D628B922600018D510 /* MarkPro-Heavy.ttf */; };
+		00B266D828B922600018D510 /* MarkPro-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00B266D628B922600018D510 /* MarkPro-Heavy.ttf */; };
+		00B266DA28B9226C0018D510 /* MarkPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00B266D928B9226C0018D510 /* MarkPro-Medium.ttf */; };
+		00B266DB28B9226C0018D510 /* MarkPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00B266D928B9226C0018D510 /* MarkPro-Medium.ttf */; };
+		00B266DD28B925180018D510 /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266DC28B925180018D510 /* AppLabel.swift */; };
+		00B266DE28B925180018D510 /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266DC28B925180018D510 /* AppLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +68,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00564AF528BA2DD700709892 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		00564AF728BA30BC00709892 /* UICollectionView+RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisterCell.swift"; sourceTree = "<group>"; };
+		00564AF928BA323000709892 /* UIView+addSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addSubviews.swift"; sourceTree = "<group>"; };
+		00564AFF28BA375700709892 /* SelectedCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		00564B0128BA377000709892 /* HotSalesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSalesCollectionViewCell.swift; sourceTree = "<group>"; };
+		00564B0328BA378700709892 /* BestSellerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerCollectionViewCell.swift; sourceTree = "<group>"; };
 		00B2665428B78DA60018D510 /* EffectiveShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B2665728B78DA60018D510 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00B2665928B78DA60018D510 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,13 +99,19 @@
 		00B266AA28B7B4230018D510 /* MyCartRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartRequestFactory.swift; sourceTree = "<group>"; };
 		00B266AC28B7BFDD0018D510 /* RequestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTests.swift; sourceTree = "<group>"; };
 		00B266AF28B7C85C0018D510 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		00B266B628B7C9C60018D510 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		00B266B628B7C9C60018D510 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		00B266B828B7C9D90018D510 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		00B266BA28B7C9EE0018D510 /* MyCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
 		00B266BC28B7CA000018D510 /* FavoritsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsViewController.swift; sourceTree = "<group>"; };
 		00B266BE28B7CA170018D510 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		00B266C028B7CCC30018D510 /* StartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartManager.swift; sourceTree = "<group>"; };
 		00B266C328B7E3CC0018D510 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		00B266C628B914620018D510 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		00B266D028B922450018D510 /* MarkPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Regular.ttf"; sourceTree = "<group>"; };
+		00B266D328B922540018D510 /* MarkPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Bold.ttf"; sourceTree = "<group>"; };
+		00B266D628B922600018D510 /* MarkPro-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Heavy.ttf"; sourceTree = "<group>"; };
+		00B266D928B9226C0018D510 /* MarkPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Medium.ttf"; sourceTree = "<group>"; };
+		00B266DC28B925180018D510 /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00B2667A28B794670018D510 /* Alamofire in Frameworks */,
+				00564AFD28BA357500709892 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +134,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00564AF328BA2D7800709892 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00B266B628B7C9C60018D510 /* MainScreenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		00564AF428BA2D9400709892 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00564AF528BA2DD700709892 /* MainScreenView.swift */,
+				00564AFE28BA36D000709892 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00564AFE28BA36D000709892 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				00564AFF28BA375700709892 /* SelectedCategoryCollectionViewCell.swift */,
+				00564B0128BA377000709892 /* HotSalesCollectionViewCell.swift */,
+				00564B0328BA378700709892 /* BestSellerCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		00B2664B28B78DA60018D510 = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				00B266AE28B7C7F70018D510 /* TabBarVC */,
-				00B266B128B7C9270018D510 /* Main */,
+				00B266B128B7C9270018D510 /* MainScreen */,
 				00B266B228B7C9300018D510 /* ProductDetails */,
 				00B266B328B7C9560018D510 /* MyCart */,
 				00B266B428B7C9800018D510 /* Favorits */,
@@ -217,6 +275,8 @@
 		00B2667328B78EC80018D510 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				00564AF728BA30BC00709892 /* UICollectionView+RegisterCell.swift */,
+				00564AF928BA323000709892 /* UIView+addSubviews.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -224,6 +284,7 @@
 		00B2667428B78ED50018D510 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				00B266DF28B939F00018D510 /* UILabel */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -242,6 +303,7 @@
 		00B2667628B78EFB0018D510 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				00B266C528B910D60018D510 /* Fonts */,
 				00B2666028B78DA90018D510 /* Assets.xcassets */,
 				00B2666228B78DA90018D510 /* LaunchScreen.storyboard */,
 			);
@@ -325,12 +387,13 @@
 			path = TabBarVC;
 			sourceTree = "<group>";
 		};
-		00B266B128B7C9270018D510 /* Main */ = {
+		00B266B128B7C9270018D510 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				00B266B628B7C9C60018D510 /* MainViewController.swift */,
+				00564AF328BA2D7800709892 /* Controller */,
+				00564AF428BA2D9400709892 /* View */,
 			);
-			path = Main;
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 		00B266B228B7C9300018D510 /* ProductDetails */ = {
@@ -369,8 +432,28 @@
 			isa = PBXGroup;
 			children = (
 				00B266C328B7E3CC0018D510 /* AppColor.swift */,
+				00B266C628B914620018D510 /* AppFont.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		00B266C528B910D60018D510 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				00B266D028B922450018D510 /* MarkPro-Regular.ttf */,
+				00B266D328B922540018D510 /* MarkPro-Bold.ttf */,
+				00B266D628B922600018D510 /* MarkPro-Heavy.ttf */,
+				00B266D928B9226C0018D510 /* MarkPro-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		00B266DF28B939F00018D510 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				00B266DC28B925180018D510 /* AppLabel.swift */,
+			);
+			path = UILabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +474,7 @@
 			name = EffectiveShop;
 			packageProductDependencies = (
 				00B2667928B794670018D510 /* Alamofire */,
+				00564AFC28BA357500709892 /* SnapKit */,
 			);
 			productName = EffectiveShop;
 			productReference = 00B2665428B78DA60018D510 /* EffectiveShop.app */;
@@ -444,6 +528,7 @@
 			mainGroup = 00B2664B28B78DA60018D510;
 			packageReferences = (
 				00B2667828B794670018D510 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				00564AFB28BA357500709892 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 00B2665528B78DA60018D510 /* Products */;
 			projectDirPath = "";
@@ -461,6 +546,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				00B2666428B78DA90018D510 /* LaunchScreen.storyboard in Resources */,
+				00B266D128B922450018D510 /* MarkPro-Regular.ttf in Resources */,
+				00B266DA28B9226C0018D510 /* MarkPro-Medium.ttf in Resources */,
+				00B266D428B922540018D510 /* MarkPro-Bold.ttf in Resources */,
+				00B266D728B922600018D510 /* MarkPro-Heavy.ttf in Resources */,
 				00B2666128B78DA90018D510 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +558,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B266DB28B9226C0018D510 /* MarkPro-Medium.ttf in Resources */,
+				00B266D828B922600018D510 /* MarkPro-Heavy.ttf in Resources */,
+				00B266D528B922540018D510 /* MarkPro-Bold.ttf in Resources */,
+				00B266D228B922450018D510 /* MarkPro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,28 +572,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00564AFA28BA323000709892 /* UIView+addSubviews.swift in Sources */,
 				00B2665828B78DA60018D510 /* AppDelegate.swift in Sources */,
 				00B2669E28B7A68B0018D510 /* MainRequestFactory.swift in Sources */,
 				00B2668228B798FB0018D510 /* ResponseCodable.swift in Sources */,
 				00B266B928B7C9D90018D510 /* ProductDetailsViewController.swift in Sources */,
 				00B266A128B7AB850018D510 /* RequestFactory.swift in Sources */,
+				00564B0028BA375700709892 /* SelectedCategoryCollectionViewCell.swift in Sources */,
 				00B266B028B7C85C0018D510 /* TabBarViewController.swift in Sources */,
-				00B266B728B7C9C60018D510 /* MainViewController.swift in Sources */,
+				00B266B728B7C9C60018D510 /* MainScreenViewController.swift in Sources */,
 				00B2669C28B7A5810018D510 /* Main.swift in Sources */,
+				00564B0228BA377000709892 /* HotSalesCollectionViewCell.swift in Sources */,
 				00B2669528B79F330018D510 /* MainResult.swift in Sources */,
 				00B266A428B7B0C50018D510 /* ProductDetails.swift in Sources */,
+				00B266DD28B925180018D510 /* AppLabel.swift in Sources */,
 				00B266A928B7B3AD0018D510 /* MyCart.swift in Sources */,
 				00B2665A28B78DA60018D510 /* SceneDelegate.swift in Sources */,
 				00B266A628B7B0FA0018D510 /* ProductDetailsRequestFactory.swift in Sources */,
 				00B2669928B7A0830018D510 /* CartResult.swift in Sources */,
+				00B266C728B914620018D510 /* AppFont.swift in Sources */,
 				00B2668628B799560018D510 /* AbstractErrorParser.swift in Sources */,
 				00B2667E28B798B10018D510 /* RequestRouter.swift in Sources */,
 				00B266C428B7E3CC0018D510 /* AppColor.swift in Sources */,
 				00B266BD28B7CA000018D510 /* FavoritsViewController.swift in Sources */,
 				00B266AB28B7B4240018D510 /* MyCartRequestFactory.swift in Sources */,
+				00564B0428BA378700709892 /* BestSellerCollectionViewCell.swift in Sources */,
 				00B2669728B79FF40018D510 /* ProductDitailResult.swift in Sources */,
 				00B2668428B7991A0018D510 /* AbstractRequestFactory.swift in Sources */,
+				00564AF628BA2DD700709892 /* MainScreenView.swift in Sources */,
 				00B266BF28B7CA170018D510 /* UserViewController.swift in Sources */,
+				00564AF828BA30BC00709892 /* UICollectionView+RegisterCell.swift in Sources */,
 				00B266BB28B7C9EE0018D510 /* MyCartViewController.swift in Sources */,
 				00B266C128B7CCC30018D510 /* StartManager.swift in Sources */,
 				00B2668028B798D40018D510 /* ErrorParser.swift in Sources */,
@@ -512,6 +613,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00B2668E28B7998B0018D510 /* ResponseCodableTests.swift in Sources */,
+				00B266DE28B925180018D510 /* AppLabel.swift in Sources */,
 				00B266AD28B7BFDD0018D510 /* RequestsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -777,6 +879,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		00564AFB28BA357500709892 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 		00B2667828B794670018D510 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -788,6 +898,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		00564AFC28BA357500709892 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00564AFB28BA357500709892 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		00B2667928B794670018D510 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 00B2667828B794670018D510 /* XCRemoteSwiftPackageReference "Alamofire" */;

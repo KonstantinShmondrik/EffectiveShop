@@ -8,12 +8,12 @@
 import UIKit
 
 final class AppLabel: UILabel {
-
+    
     // MARK: - Properties
     var title: String?
     var colorText: UIColor?
     var numberLines: Int
-
+    
     // MARK: - Init
     init(title: String? = "",
          alignment: NSTextAlignment,

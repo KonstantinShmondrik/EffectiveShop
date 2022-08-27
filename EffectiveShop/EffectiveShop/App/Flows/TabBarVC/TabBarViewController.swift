@@ -25,7 +25,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         tabBar.clipsToBounds = true
         
         
-        let mainVC = UINavigationController(rootViewController:MainViewController())
+        let mainVC = UINavigationController(rootViewController:MainScreenViewController())
         
         let tabBarItemMain = UITabBarItem(title: nil,
                                           image: UIImage(systemName: "app")?.withRenderingMode(UIImage.RenderingMode.automatic),
