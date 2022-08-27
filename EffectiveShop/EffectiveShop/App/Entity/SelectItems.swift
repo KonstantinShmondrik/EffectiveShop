@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct SelectItems {
+    var name: String
+    var image: String
+}

@@ -12,14 +12,19 @@ class MainScreenViewController: UIViewController {
     // MARK: - Private Properties
     private let requestFactory = RequestFactory()
     
-    var mainResult: MainResult = MainResult(homeStore: [], bestSeller: [])
+    // MARK: - Properties
     
+    var mainResult: MainResult = MainResult(homeStore: [], bestSeller: [])
+    var selectItems: [SelectItems] = [SelectItems(name: "Phones", image: "phone"),
+                                      SelectItems(name: "Computer", image: "computer"),
+                                      SelectItems(name: "Heals", image: "health"),
+                                      SelectItems(name: "Books", image: "books")]
     // MARK: - Initialisers
     
     init() {
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -27,9 +32,10 @@ class MainScreenViewController: UIViewController {
     // MARK: - Lifecycle
     
     override func loadView() {
-                let view = MainScreenView()
-//                view.delegate = self
-                self.view = view
+        let view = MainScreenView()
+        //                view.delegate = self
+        self.view = view
+        view.selectItems = selectItems
         
     }
     
@@ -38,12 +44,6 @@ class MainScreenViewController: UIViewController {
         view.backgroundColor = .white
         setNavigationBar()
         getMainScreen()
-       
-        
-        //        let label = AppLabel(title: "фьрррор", alignment: .center, fontSize: AppFont.markProFont(ofSize: 60, weight: .heavy) )
-        //        self.view.addSubview(label)
-        //        label.translatesAutoresizingMaskIntoConstraints = false
-        
         
     }
     
@@ -58,16 +58,16 @@ class MainScreenViewController: UIViewController {
         let main = requestFactory.makeMainRequestFactory()
         main.getMain() { [weak self] response in
             DispatchQueue.main.async {
-            switch response.result {
-            case .success(let result):
-                print(result)
-                self?.mainResult = result
-                
-            case .failure(let error):
-                print(error.localizedDescription)
+                switch response.result {
+                case .success(let result):
+                    print(result)
+                    self?.mainResult = result
+                    
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
             }
         }
-    }
     }
     
     

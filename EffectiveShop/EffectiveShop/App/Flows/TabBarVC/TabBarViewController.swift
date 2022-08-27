@@ -12,7 +12,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         self.delegate = self
         
-        UITabBar.appearance().barTintColor = .white
+        UITabBar.appearance().barTintColor = AppColor.darkBlue
         UITabBar.appearance().unselectedItemTintColor = .white
         UITabBar.appearance().tintColor = .white
         UITabBar.appearance().backgroundColor = AppColor.darkBlue
@@ -71,9 +71,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         
     }
     private func configuredNavigationController (navVC: UINavigationController) {
-        navVC.navigationBar.barTintColor = .white
+        navVC.navigationBar.barTintColor = AppColor.backgraund
+        navVC.navigationBar.backgroundColor = AppColor.backgraund
         navVC.navigationBar.isTranslucent = true
-        navVC.navigationBar.prefersLargeTitles = true
+        navVC.navigationBar.prefersLargeTitles = false
         navVC.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
     }

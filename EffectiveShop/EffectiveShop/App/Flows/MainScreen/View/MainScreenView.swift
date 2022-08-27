@@ -23,6 +23,8 @@ class MainScreenView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let width = (UIScreen.main.bounds.size.width)
+        let height = (UIScreen.main.bounds.size.height)
+        
         layout.estimatedItemSize = CGSize(width: width, height: 700)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
@@ -48,6 +50,8 @@ class MainScreenView: UIView {
     var mainScreenItems: [MainScreenItems] = [.selectCategoryCell,
                                               .bestSellerCell,
                                               .hoteSalesCell]
+    var selectItems: [SelectItems] = []
+    
     
     // MARK: - Initializers
     
@@ -97,7 +101,7 @@ extension MainScreenView: UICollectionViewDataSource {
         case .selectCategoryCell:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SelectedCategoryCollectionViewCell.reuseIdentifier, for: indexPath) as? SelectedCategoryCollectionViewCell else {return UICollectionViewCell()}
             
-            
+            cell.configurate(selectItems: selectItems)
             
 
             cell.layoutIfNeeded()
