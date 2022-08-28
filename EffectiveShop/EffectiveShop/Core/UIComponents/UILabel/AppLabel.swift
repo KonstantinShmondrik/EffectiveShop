@@ -35,3 +35,11 @@ final class AppLabel: UILabel {
     }
 }
 
+//let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue]
+//let underlineAttributedString = NSAttributedString(string: "StringWithUnderLine", attributes: underlineAttribute)
+//label.attributedText = underlineAttributedString
+
+
+//let underlineAttribute = [NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.thick.rawValue]
+//let underlineAttributedString = NSAttributedString(string: "StringWithUnderLine", attributes: underlineAttribute)
+//label.attributedText = underlineAttributedString

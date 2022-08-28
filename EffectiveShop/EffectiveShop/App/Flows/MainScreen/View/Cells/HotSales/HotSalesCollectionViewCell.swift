@@ -11,8 +11,8 @@ import SnapKit
 class HotSalesCollectionViewCell: UICollectionViewCell {
     static var reuseIdentifier = "HotSalesCollectionViewCell"
     
-    
-    
+    // MARK: - Properties
+    var homeStore: [HomeStore] = []
     
     // MARK: - Outlets
     
@@ -82,6 +82,11 @@ class HotSalesCollectionViewCell: UICollectionViewCell {
 
 // MARK: - Configure Cell
 extension HotSalesCollectionViewCell {
+    
+    func configurate(homeStore: [HomeStore]) {
+        self.homeStore = homeStore
+        
+    }
 
 }
 
@@ -102,17 +107,21 @@ extension HotSalesCollectionViewCell: UICollectionViewDelegate {
 // MARK: - UICollectionViewDataSource
 extension HotSalesCollectionViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return homeStore.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: HotSalesItemsCell = collectionView.cell(forRowAt: indexPath) else {
             return UICollectionViewCell()
         }
-        cell.backgroundColor = AppColor.orange
-        
-//        let selectItem = selectItems[indexPath.item]
-//        cell.configurate(name: selectItem.name, image: selectItem.image)
+        let homeStore = homeStore[indexPath.item]
+        cell.configurate(data: .init(id: homeStore.id,
+                                     isNew: homeStore.isNew ?? false,
+                                     title: homeStore.title ?? "",
+                                     subtitle: homeStore.subtitle ?? "",
+                                     picture: homeStore.picture ?? "",
+                                     isBuy: homeStore.isBuy ?? false
+                                    ))
         
         cell.layoutIfNeeded()
         return cell

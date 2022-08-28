@@ -33,9 +33,11 @@ class MainScreenViewController: UIViewController {
     
     override func loadView() {
         let view = MainScreenView()
+//        getMainScreen()
         //                view.delegate = self
         self.view = view
         view.selectItems = selectItems
+        view.configurate(mainResult: mainResult)
         
     }
     
@@ -44,6 +46,9 @@ class MainScreenViewController: UIViewController {
         view.backgroundColor = .white
         setNavigationBar()
         getMainScreen()
+//        let view = MainScreenView()
+//        self.view = view
+//        view.configurate(mainResult: mainResult)
         
     }
     
@@ -57,18 +62,21 @@ class MainScreenViewController: UIViewController {
     private func getMainScreen() {
         let main = requestFactory.makeMainRequestFactory()
         main.getMain() { [weak self] response in
-            DispatchQueue.main.async {
+           
                 switch response.result {
                 case .success(let result):
                     print(result)
                     self?.mainResult = result
+                    DispatchQueue.main.async {
+                        self?.loadView()
+                    }
                     
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
             }
         }
-    }
+    
     
     
     

@@ -7,11 +7,19 @@
 
 import UIKit
 import SnapKit
+import SDWebImage
 
 class HotSalesItemsCell: UICollectionViewCell {
     static var reuseIdentifier = "HotSalesItemsCell"
     
-    
+    struct ViewData {
+        let id: Int?
+        let isNew: Bool?
+        let title: String?
+        let subtitle: String?
+        let picture: String?
+        let isBuy: Bool?
+    }
     
     
     // MARK: - Outlets
@@ -55,7 +63,7 @@ class HotSalesItemsCell: UICollectionViewCell {
                              fontSize: AppFont.markProFont(ofSize: 25, weight: .bold),
                              colorText: UIColor.white,
                              numberLines: 1)
-        label.text = "Iphone 12"
+
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -65,7 +73,7 @@ class HotSalesItemsCell: UICollectionViewCell {
                              fontSize: AppFont.markProFont(ofSize: 11, weight: .regular),
                              colorText: UIColor.white,
                              numberLines: 1)
-        label.text = "Súper. Mega. Rápido."
+      
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -79,7 +87,7 @@ class HotSalesItemsCell: UICollectionViewCell {
         button.clipsToBounds = true
         button.titleLabel?.font = AppFont.markProFont(ofSize: 11, weight: .bold)
         button.addTarget(self, action: #selector(buyButtonPressed), for: .touchUpInside)
-        
+       
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -106,9 +114,20 @@ class HotSalesItemsCell: UICollectionViewCell {
 
 // MARK: - Configure Cell
 extension HotSalesItemsCell {
-    func configurate(name: String, image: String) {
-        //        self.categoryImageView.image = UIImage(named: image)
-        //        self.categoryNamesLabel.text = name
+    func configurate(data: HotSalesItemsCell.ViewData) {
+        self.brendLabel.text = data.title
+        self.descriptionLabel.text = data.subtitle
+        
+        guard let imageString = data.picture else { return }
+        guard let url = URL(string: imageString) else { return }
+        self.pictureImageView.sd_setImage(with: url, placeholderImage: UIImage(named: ""))
+        
+        if data.isNew == true {
+            self.circularView.isHidden = false
+        } else {
+            self.circularView.isHidden = true
+        }
+        
     }
 }
 
@@ -133,7 +152,7 @@ private extension HotSalesItemsCell {
     
     func configureUI() {
         conteinerView.backgroundColor = AppColor.backgraund
-
+        
         
         pictureImageView.snp.makeConstraints {
             $0.leading.trailing.equalTo(conteinerView).offset(0)
@@ -156,7 +175,7 @@ private extension HotSalesItemsCell {
             $0.top.equalTo(circularView.snp.bottom).offset(18)
             $0.leading.equalTo(conteinerView).offset(32)
         }
-    
+        
         
         descriptionLabel.snp.makeConstraints {
             $0.top.equalTo(brendLabel.snp.bottom).offset(5)

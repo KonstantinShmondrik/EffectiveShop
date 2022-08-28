@@ -52,6 +52,7 @@ class MainScreenView: UIView {
                                               .bestSellerCell]
     var selectItems: [SelectItems] = []
     
+    var mainResult: MainResult = MainResult(homeStore: [], bestSeller: [])
     
     // MARK: - Initializers
     
@@ -78,6 +79,15 @@ class MainScreenView: UIView {
         }
     }
     
+}
+
+// MARK: - Configure Cell
+extension MainScreenView {
+    func configurate(mainResult: MainResult) {
+        self.mainResult = mainResult
+        
+        
+    }
 }
 
 // MARK: UICollectionViewDelegate
@@ -111,7 +121,7 @@ extension MainScreenView: UICollectionViewDataSource {
         case .hoteSalesCell:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HotSalesCollectionViewCell.reuseIdentifier, for: indexPath) as? HotSalesCollectionViewCell else {return UICollectionViewCell()}
             
-            
+            cell.configurate(homeStore: mainResult.homeStore)
             
 
             cell.layoutIfNeeded()
