@@ -12,6 +12,13 @@ class BestSellerCollectionViewCell: UICollectionViewCell {
     static var reuseIdentifier = "BestSellerCollectionViewCell"
     
     // MARK: - Outlets
+    
+    private let conteinerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private(set) lazy var hederLabel: UILabel = {
            let label = AppLabel(title: "Best Seller",
                                 alignment: .left,
@@ -21,11 +28,19 @@ class BestSellerCollectionViewCell: UICollectionViewCell {
            return label
        }()
     
-    private let conteinerView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+    private(set) lazy var seeMoreButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = AppColor.backgraund
+        button.setTitle("see more", for: .normal)
+        button.tintColor = AppColor.orange
+        button.titleLabel?.font = AppFont.markProFont(ofSize: 15, weight: .regular)
+        button.addTarget(self, action: #selector(seeMoreButtonPressed), for: .touchUpInside)
+    
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
+    
+   
     
     
     // MARK: - Init
@@ -50,12 +65,21 @@ extension BestSellerCollectionViewCell {
 
 }
 
+// MARK: - Actions
+extension BestSellerCollectionViewCell {
+    
+    @objc func seeMoreButtonPressed() {
+        print ("Press button see more")
+        
+    }
+}
+
 // MARK: - Configure UI
 private extension BestSellerCollectionViewCell {
     
     func addSubviewsContent() {
         contentView.addSubview(conteinerView)
-        conteinerView.addSubviews([hederLabel])
+        conteinerView.addSubviews([hederLabel, seeMoreButton])
     }
     
     func configureUI() {
@@ -72,6 +96,10 @@ private extension BestSellerCollectionViewCell {
             $0.trailing.equalTo(conteinerView).offset(-16)
         }
         
+        seeMoreButton.snp.makeConstraints {
+            $0.trailing.equalTo(conteinerView).offset(-30)
+            $0.centerY.equalTo(hederLabel.snp.centerY)
+        }
         
         
         conteinerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true

@@ -17,6 +17,7 @@
 		00564B0928BA64E300709892 /* SelectedCategoryItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B0828BA64E300709892 /* SelectedCategoryItemsCell.swift */; };
 		00564B0B28BA898400709892 /* UIImageView+setImageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B0A28BA898300709892 /* UIImageView+setImageColor.swift */; };
 		00564B0D28BA974000709892 /* SelectItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B0C28BA974000709892 /* SelectItems.swift */; };
+		00564B0F28BB85B000709892 /* HotSalesItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B0E28BB85AF00709892 /* HotSalesItemsCell.swift */; };
 		00B2665828B78DA60018D510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2665728B78DA60018D510 /* AppDelegate.swift */; };
 		00B2665A28B78DA60018D510 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2665928B78DA60018D510 /* SceneDelegate.swift */; };
 		00B2666128B78DA90018D510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B2666028B78DA90018D510 /* Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		00564B0828BA64E300709892 /* SelectedCategoryItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoryItemsCell.swift; sourceTree = "<group>"; };
 		00564B0A28BA898300709892 /* UIImageView+setImageColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+setImageColor.swift"; sourceTree = "<group>"; };
 		00564B0C28BA974000709892 /* SelectItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectItems.swift; sourceTree = "<group>"; };
+		00564B0E28BB85AF00709892 /* HotSalesItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSalesItemsCell.swift; sourceTree = "<group>"; };
 		00B2665428B78DA60018D510 /* EffectiveShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B2665728B78DA60018D510 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00B2665928B78DA60018D510 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				00564B0128BA377000709892 /* HotSalesCollectionViewCell.swift */,
+				00564B0E28BB85AF00709892 /* HotSalesItemsCell.swift */,
 			);
 			path = HotSales;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				00B2669728B79FF40018D510 /* ProductDitailResult.swift in Sources */,
 				00B2668428B7991A0018D510 /* AbstractRequestFactory.swift in Sources */,
 				00564AF628BA2DD700709892 /* MainScreenView.swift in Sources */,
+				00564B0F28BB85B000709892 /* HotSalesItemsCell.swift in Sources */,
 				00B266BF28B7CA170018D510 /* UserViewController.swift in Sources */,
 				00564AF828BA30BC00709892 /* UICollectionView+RegisterCell.swift in Sources */,
 				00B266BB28B7C9EE0018D510 /* MyCartViewController.swift in Sources */,

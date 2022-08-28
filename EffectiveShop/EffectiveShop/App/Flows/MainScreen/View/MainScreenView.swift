@@ -48,8 +48,8 @@ class MainScreenView: UIView {
     // MARK: - Properties
     
     var mainScreenItems: [MainScreenItems] = [.selectCategoryCell,
-                                              .bestSellerCell,
-                                              .hoteSalesCell]
+                                              .hoteSalesCell,
+                                              .bestSellerCell]
     var selectItems: [SelectItems] = []
     
     
@@ -108,16 +108,6 @@ extension MainScreenView: UICollectionViewDataSource {
             
             return cell
             
-        case .bestSellerCell:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BestSellerCollectionViewCell.reuseIdentifier, for: indexPath) as? BestSellerCollectionViewCell else {return UICollectionViewCell()}
-            
-            
-            
-
-            cell.layoutIfNeeded()
-            
-            return cell
-            
         case .hoteSalesCell:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HotSalesCollectionViewCell.reuseIdentifier, for: indexPath) as? HotSalesCollectionViewCell else {return UICollectionViewCell()}
             
@@ -128,6 +118,15 @@ extension MainScreenView: UICollectionViewDataSource {
             
             return cell
             
+        case .bestSellerCell:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BestSellerCollectionViewCell.reuseIdentifier, for: indexPath) as? BestSellerCollectionViewCell else {return UICollectionViewCell()}
+            
+            
+            
+
+            cell.layoutIfNeeded()
+            
+            return cell
             
         }
     }

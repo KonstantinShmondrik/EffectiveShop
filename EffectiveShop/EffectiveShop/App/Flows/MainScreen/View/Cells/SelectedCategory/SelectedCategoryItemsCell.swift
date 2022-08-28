@@ -15,7 +15,7 @@ class SelectedCategoryItemsCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             categoryNamesLabel.textColor = isSelected ? AppColor.orange : .black
-            cerculeView.backgroundColor = isSelected ? AppColor.orange : .white
+            circularView.backgroundColor = isSelected ? AppColor.orange : .white
             
             if isSelected {
                 categoryImageView.setImageColor(color: .white)
@@ -32,7 +32,7 @@ class SelectedCategoryItemsCell: UICollectionViewCell {
         return view
     }()
     
-    private(set) lazy var cerculeView: UIView = {
+    private(set) lazy var circularView: UIView = {
         let view = UIView(frame: frame)
         
         view.layer.cornerRadius = 35
@@ -91,8 +91,8 @@ private extension SelectedCategoryItemsCell {
     
     func addSubviewsContent() {
         contentView.addSubview(conteinerView)
-        conteinerView.addSubviews([cerculeView, categoryNamesLabel])
-        cerculeView.addSubview(categoryImageView)
+        conteinerView.addSubviews([circularView, categoryNamesLabel])
+        circularView.addSubview(categoryImageView)
     }
     
     func configureUI() {
@@ -103,7 +103,7 @@ private extension SelectedCategoryItemsCell {
             $0.height.equalTo(130)
         }
         
-        cerculeView.snp.makeConstraints {
+        circularView.snp.makeConstraints {
             $0.top.equalTo(conteinerView).offset(20)
             $0.width.equalTo(70)
             $0.height.equalTo(70)
@@ -111,13 +111,13 @@ private extension SelectedCategoryItemsCell {
         }
         
         categoryImageView.snp.makeConstraints {
-            $0.center.equalTo(cerculeView.snp.center)
+            $0.center.equalTo(circularView.snp.center)
             $0.height.equalTo(30)
         }
         
         
         categoryNamesLabel.snp.makeConstraints {
-            $0.top.equalTo(cerculeView.snp.bottom).offset(7)
+            $0.top.equalTo(circularView.snp.bottom).offset(7)
             $0.leading.trailing.equalTo(conteinerView)
         }
         

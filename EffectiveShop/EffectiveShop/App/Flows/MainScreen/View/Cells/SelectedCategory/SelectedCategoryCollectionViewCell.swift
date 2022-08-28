@@ -41,8 +41,7 @@ class SelectedCategoryCollectionViewCell: UICollectionViewCell {
         button.tintColor = AppColor.orange
         button.titleLabel?.font = AppFont.markProFont(ofSize: 15, weight: .regular)
         button.addTarget(self, action: #selector(viewAllButtonPressed), for: .touchUpInside)
-        
-        
+
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -53,7 +52,6 @@ class SelectedCategoryCollectionViewCell: UICollectionViewCell {
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = AppColor.backgraund
-        
         collectionView.allowsSelection = true
         collectionView.isUserInteractionEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
@@ -114,9 +112,7 @@ extension SelectedCategoryCollectionViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: SelectedCategoryItemsCell = collectionView.cell(forRowAt: indexPath) else {
-            return UICollectionViewCell()
-        }
-        cell.backgroundColor = AppColor.orange
+            return UICollectionViewCell() }
         
         let selectItem = selectItems[indexPath.item]
         cell.configurate(name: selectItem.name, image: selectItem.image)
@@ -203,13 +199,3 @@ private extension SelectedCategoryCollectionViewCell {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
