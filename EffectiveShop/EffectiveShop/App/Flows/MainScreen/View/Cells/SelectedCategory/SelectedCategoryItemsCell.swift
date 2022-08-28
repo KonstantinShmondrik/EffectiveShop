@@ -120,9 +120,7 @@ private extension SelectedCategoryItemsCell {
             $0.top.equalTo(circularView.snp.bottom).offset(7)
             $0.leading.trailing.equalTo(conteinerView)
         }
-        
-        
-        
+
         conteinerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
         conteinerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
         conteinerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true

@@ -33,7 +33,6 @@ class MainScreenViewController: UIViewController {
     
     override func loadView() {
         let view = MainScreenView()
-//        getMainScreen()
         //                view.delegate = self
         self.view = view
         view.selectItems = selectItems
@@ -46,9 +45,6 @@ class MainScreenViewController: UIViewController {
         view.backgroundColor = .white
         setNavigationBar()
         getMainScreen()
-//        let view = MainScreenView()
-//        self.view = view
-//        view.configurate(mainResult: mainResult)
         
     }
     
@@ -62,24 +58,19 @@ class MainScreenViewController: UIViewController {
     private func getMainScreen() {
         let main = requestFactory.makeMainRequestFactory()
         main.getMain() { [weak self] response in
-           
-                switch response.result {
-                case .success(let result):
-                    print(result)
-                    self?.mainResult = result
-                    DispatchQueue.main.async {
-                        self?.loadView()
-                    }
-                    
-                case .failure(let error):
-                    print(error.localizedDescription)
+            switch response.result {
+            case .success(let result):
+                print(result)
+                self?.mainResult = result
+                DispatchQueue.main.async {
+                    self?.loadView()
                 }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
-    
-    
-    
-    
+    }
+
     // MARK: - Actions
     @objc func filterTapped (sender: UIBarButtonItem) {
         print("tap filter")

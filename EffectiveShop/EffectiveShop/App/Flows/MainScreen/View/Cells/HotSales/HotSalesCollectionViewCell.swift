@@ -23,13 +23,13 @@ class HotSalesCollectionViewCell: UICollectionViewCell {
     }()
     
     private(set) lazy var hederLabel: UILabel = {
-           let label = AppLabel(title: "Hot sales",
-                                alignment: .left,
-                                fontSize: AppFont.markProFont(ofSize: 25, weight: .bold),
-                                numberLines: 0)
-   
-           return label
-       }()
+        let label = AppLabel(title: "Hot sales",
+                             alignment: .left,
+                             fontSize: AppFont.markProFont(ofSize: 25, weight: .bold),
+                             numberLines: 0)
+        
+        return label
+    }()
     
     private(set) lazy var seeMoreButton: UIButton = {
         let button = UIButton(type: .system)
@@ -38,7 +38,7 @@ class HotSalesCollectionViewCell: UICollectionViewCell {
         button.tintColor = AppColor.orange
         button.titleLabel?.font = AppFont.markProFont(ofSize: 15, weight: .regular)
         button.addTarget(self, action: #selector(seeMoreButtonPressed), for: .touchUpInside)
-    
+        
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -58,7 +58,7 @@ class HotSalesCollectionViewCell: UICollectionViewCell {
         return collectionView
         
     }()
-   
+    
     
     
     // MARK: - Init
@@ -74,7 +74,7 @@ class HotSalesCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
         configureUI()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -87,7 +87,7 @@ extension HotSalesCollectionViewCell {
         self.homeStore = homeStore
         
     }
-
+    
 }
 
 // MARK: - Actions
@@ -194,8 +194,7 @@ private extension HotSalesCollectionViewCell {
             $0.bottom.equalTo(conteinerView).offset(-4)
             
         }
-        
-        
+
         conteinerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
         conteinerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
         conteinerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true

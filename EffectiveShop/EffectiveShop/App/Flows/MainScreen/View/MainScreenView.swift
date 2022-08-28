@@ -18,7 +18,7 @@ enum MainScreenItems: String {
 class MainScreenView: UIView {
     
     // MARK: - Outlets
-
+    
     private(set) lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -85,8 +85,6 @@ class MainScreenView: UIView {
 extension MainScreenView {
     func configurate(mainResult: MainResult) {
         self.mainResult = mainResult
-        
-        
     }
 }
 
@@ -113,7 +111,6 @@ extension MainScreenView: UICollectionViewDataSource {
             
             cell.configurate(selectItems: selectItems)
             
-
             cell.layoutIfNeeded()
             
             return cell
@@ -123,7 +120,6 @@ extension MainScreenView: UICollectionViewDataSource {
             
             cell.configurate(homeStore: mainResult.homeStore)
             
-
             cell.layoutIfNeeded()
             
             return cell
@@ -131,9 +127,8 @@ extension MainScreenView: UICollectionViewDataSource {
         case .bestSellerCell:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BestSellerCollectionViewCell.reuseIdentifier, for: indexPath) as? BestSellerCollectionViewCell else {return UICollectionViewCell()}
             
+            cell.configurate(bestSeller: mainResult.bestSeller)
             
-            
-
             cell.layoutIfNeeded()
             
             return cell

@@ -63,7 +63,7 @@ class HotSalesItemsCell: UICollectionViewCell {
                              fontSize: AppFont.markProFont(ofSize: 25, weight: .bold),
                              colorText: UIColor.white,
                              numberLines: 1)
-
+        
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -73,7 +73,7 @@ class HotSalesItemsCell: UICollectionViewCell {
                              fontSize: AppFont.markProFont(ofSize: 11, weight: .regular),
                              colorText: UIColor.white,
                              numberLines: 1)
-      
+        
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -87,7 +87,7 @@ class HotSalesItemsCell: UICollectionViewCell {
         button.clipsToBounds = true
         button.titleLabel?.font = AppFont.markProFont(ofSize: 11, weight: .bold)
         button.addTarget(self, action: #selector(buyButtonPressed), for: .touchUpInside)
-       
+        
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()

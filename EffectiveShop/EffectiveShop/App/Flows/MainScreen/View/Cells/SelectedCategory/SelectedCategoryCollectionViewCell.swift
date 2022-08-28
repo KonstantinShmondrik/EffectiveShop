@@ -41,7 +41,7 @@ class SelectedCategoryCollectionViewCell: UICollectionViewCell {
         button.tintColor = AppColor.orange
         button.titleLabel?.font = AppFont.markProFont(ofSize: 15, weight: .regular)
         button.addTarget(self, action: #selector(viewAllButtonPressed), for: .touchUpInside)
-
+        
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
