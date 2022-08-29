@@ -12,10 +12,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         self.delegate = self
         
-        UITabBar.appearance().barTintColor = .white
+        UITabBar.appearance().barTintColor = AppColor.darkBlue
         UITabBar.appearance().unselectedItemTintColor = .white
         UITabBar.appearance().tintColor = .white
-        UITabBar.appearance().backgroundColor = AppColor.DarkBlue
+        UITabBar.appearance().backgroundColor = AppColor.darkBlue
         UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 10, vertical: 10)
        
         
@@ -25,7 +25,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         tabBar.clipsToBounds = true
         
         
-        let mainVC = UINavigationController(rootViewController:MainViewController())
+        let mainVC = UINavigationController(rootViewController:MainScreenViewController())
         
         let tabBarItemMain = UITabBarItem(title: nil,
                                           image: UIImage(systemName: "app")?.withRenderingMode(UIImage.RenderingMode.automatic),
@@ -71,9 +71,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         
     }
     private func configuredNavigationController (navVC: UINavigationController) {
-        navVC.navigationBar.barTintColor = .white
+        navVC.navigationBar.barTintColor = AppColor.backgraund
+        navVC.navigationBar.backgroundColor = AppColor.backgraund
         navVC.navigationBar.isTranslucent = true
-        navVC.navigationBar.prefersLargeTitles = true
+        navVC.navigationBar.prefersLargeTitles = false
         navVC.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
     }
