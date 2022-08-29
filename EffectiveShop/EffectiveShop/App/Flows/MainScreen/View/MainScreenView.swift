@@ -14,6 +14,10 @@ enum MainScreenItems: String {
     case hoteSalesCell
     case bestSellerCell
 }
+protocol MainScreenViewProtocol {
+    func showProductDitail()
+    
+}
 
 class MainScreenView: UIView {
     
@@ -46,6 +50,7 @@ class MainScreenView: UIView {
     }()
     
     // MARK: - Properties
+    var delegate: MainScreenViewProtocol?
     
     var mainScreenItems: [MainScreenItems] = [.selectCategoryCell,
                                               .hoteSalesCell,
@@ -60,6 +65,7 @@ class MainScreenView: UIView {
         super.init(frame: .zero)
         backgroundColor = UIColor.systemPink.withAlphaComponent(0.1)
         setupLayout()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -128,6 +134,7 @@ extension MainScreenView: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BestSellerCollectionViewCell.reuseIdentifier, for: indexPath) as? BestSellerCollectionViewCell else {return UICollectionViewCell()}
             
             cell.configurate(bestSeller: mainResult.bestSeller)
+            cell.delegate = self
             
             cell.layoutIfNeeded()
             
@@ -138,6 +145,14 @@ extension MainScreenView: UICollectionViewDataSource {
 }
 
 extension MainScreenView: UICollectionViewDelegateFlowLayout {
+    
+    
+}
+
+extension MainScreenView: BestSellerCollectionViewCellProtocol {
+    func showProductDitail() {
+        delegate?.showProductDitail()
+    }
     
     
 }

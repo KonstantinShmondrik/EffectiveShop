@@ -8,11 +8,16 @@
 import UIKit
 import SnapKit
 
+protocol BestSellerCollectionViewCellProtocol {
+    func showProductDitail()
+}
+
 class BestSellerCollectionViewCell: UICollectionViewCell {
     static var reuseIdentifier = "BestSellerCollectionViewCell"
     
     // MARK: - Properties
     var bestSeller: [BestSeller] = []
+    var delegate: BestSellerCollectionViewCellProtocol?
     
     // MARK: - Outlets
     
@@ -129,6 +134,7 @@ extension BestSellerCollectionViewCell: UICollectionViewDataSource {
 extension BestSellerCollectionViewCell {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.showProductDitail()
         print("нажата ячейка \(indexPath.item)")
     }
 }

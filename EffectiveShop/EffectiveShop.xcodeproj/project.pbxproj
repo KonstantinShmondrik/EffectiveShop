@@ -286,6 +286,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		008F7FC728BD240A0092D1F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		00B2664B28B78DA60018D510 = {
 			isa = PBXGroup;
 			children = (
@@ -529,6 +536,7 @@
 		00B266B228B7C9300018D510 /* ProductDetails */ = {
 			isa = PBXGroup;
 			children = (
+				008F7FC728BD240A0092D1F6 /* Controller */,
 				00B266B828B7C9D90018D510 /* ProductDetailsViewController.swift */,
 			);
 			path = ProductDetails;

@@ -34,7 +34,7 @@ class MainScreenViewController: UIViewController {
     
     override func loadView() {
         let view = MainScreenView()
-        //                view.delegate = self
+        view.delegate = self
         self.view = view
         view.selectItems = selectItems
         view.configurate(mainResult: mainResult)
@@ -85,5 +85,13 @@ class MainScreenViewController: UIViewController {
     @objc func filterTapped (sender: UIBarButtonItem) {
         getFilterMenu()
     }
+    
+}
+
+extension MainScreenViewController: MainScreenViewProtocol {
+    func showProductDitail() {
+        navigationController?.pushViewController(ProductDetailsViewController(), animated: true)
+    }
+    
     
 }

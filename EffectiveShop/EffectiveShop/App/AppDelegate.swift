@@ -18,27 +18,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let main = requestFactory.makeMainRequestFactory()
-        let productDitails = requestFactory.makeProductDetailsRequestFactory()
+//        let main = requestFactory.makeMainRequestFactory()
+//        let productDitails = requestFactory.makeProductDetailsRequestFactory()
         let myCart = requestFactory.makeMyCartRequestFactory()
         
-        main.getMain() { response in
-            switch response.result {
-            case .success(let result):
-                print(result)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+//        main.getMain() { response in
+//            switch response.result {
+//            case .success(let result):
+//                print(result)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
 
-        productDitails.getProductDetails() { response in
-            switch response.result {
-            case .success(let result):
-                print(result)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+//        productDitails.getProductDetails() { response in
+//            switch response.result {
+//            case .success(let result):
+//                print(result)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
         
         myCart.getMyCart() { response in
             switch response.result {
