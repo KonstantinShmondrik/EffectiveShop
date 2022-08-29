@@ -11,6 +11,7 @@ class MainScreenViewController: UIViewController {
     
     // MARK: - Private Properties
     private let requestFactory = RequestFactory()
+    private let transition = PanelTransition()
     
     // MARK: - Properties
     
@@ -55,6 +56,15 @@ class MainScreenViewController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = AppColor.darkBlue
     }
     
+    private func getFilterMenu() {
+        let child = FilterOptionsViewController()
+                child.transitioningDelegate = transition
+                child.modalPresentationStyle = .custom
+
+                present(child, animated: true)
+        
+    }
+    
     private func getMainScreen() {
         let main = requestFactory.makeMainRequestFactory()
         main.getMain() { [weak self] response in
@@ -73,7 +83,7 @@ class MainScreenViewController: UIViewController {
 
     // MARK: - Actions
     @objc func filterTapped (sender: UIBarButtonItem) {
-        print("tap filter")
+        getFilterMenu()
     }
     
 }

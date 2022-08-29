@@ -20,6 +20,17 @@
 		00564B0F28BB85B000709892 /* HotSalesItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B0E28BB85AF00709892 /* HotSalesItemsCell.swift */; };
 		00564B1228BBB5FA00709892 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 00564B1128BBB5FA00709892 /* SDWebImage */; };
 		00564B1428BBFEB400709892 /* BestSellerItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B1328BBFEB400709892 /* BestSellerItemsCell.swift */; };
+		00564B1A28BCBDAD00709892 /* PanelTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B1928BCBDAD00709892 /* PanelTransition.swift */; };
+		00564B1C28BCBDD700709892 /* TransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B1B28BCBDD700709892 /* TransitionDriver.swift */; };
+		00564B1E28BCBDFD00709892 /* TransitionDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B1D28BCBDFD00709892 /* TransitionDirection.swift */; };
+		00564B2028BCBE1900709892 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B1F28BCBE1900709892 /* PresentationController.swift */; };
+		00564B2228BCBE3C00709892 /* DimmPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B2128BCBE3C00709892 /* DimmPresentationController.swift */; };
+		00564B2428BCBE5B00709892 /* PresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B2328BCBE5B00709892 /* PresentAnimation.swift */; };
+		00564B2628BCBE8300709892 /* DismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B2528BCBE8300709892 /* DismissAnimation.swift */; };
+		00564B2828BCBEB400709892 /* CGPoint+Velocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B2728BCBEB400709892 /* CGPoint+Velocity.swift */; };
+		00564B2D28BCBFB300709892 /* FilterOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B2C28BCBFB300709892 /* FilterOptionsViewController.swift */; };
+		00564B2F28BCBFCB00709892 /* FilterOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B2E28BCBFCB00709892 /* FilterOptionsView.swift */; };
+		008F7FC628BD0E310092D1F6 /* MenuItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008F7FC528BD0E310092D1F6 /* MenuItemsTableViewCell.swift */; };
 		00B2665828B78DA60018D510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2665728B78DA60018D510 /* AppDelegate.swift */; };
 		00B2665A28B78DA60018D510 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2665928B78DA60018D510 /* SceneDelegate.swift */; };
 		00B2666128B78DA90018D510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B2666028B78DA90018D510 /* Assets.xcassets */; };
@@ -85,6 +96,17 @@
 		00564B0C28BA974000709892 /* SelectItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectItems.swift; sourceTree = "<group>"; };
 		00564B0E28BB85AF00709892 /* HotSalesItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSalesItemsCell.swift; sourceTree = "<group>"; };
 		00564B1328BBFEB400709892 /* BestSellerItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerItemsCell.swift; sourceTree = "<group>"; };
+		00564B1928BCBDAD00709892 /* PanelTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelTransition.swift; sourceTree = "<group>"; };
+		00564B1B28BCBDD700709892 /* TransitionDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDriver.swift; sourceTree = "<group>"; };
+		00564B1D28BCBDFD00709892 /* TransitionDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDirection.swift; sourceTree = "<group>"; };
+		00564B1F28BCBE1900709892 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		00564B2128BCBE3C00709892 /* DimmPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmPresentationController.swift; sourceTree = "<group>"; };
+		00564B2328BCBE5B00709892 /* PresentAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimation.swift; sourceTree = "<group>"; };
+		00564B2528BCBE8300709892 /* DismissAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimation.swift; sourceTree = "<group>"; };
+		00564B2728BCBEB400709892 /* CGPoint+Velocity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Velocity.swift"; sourceTree = "<group>"; };
+		00564B2C28BCBFB300709892 /* FilterOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptionsViewController.swift; sourceTree = "<group>"; };
+		00564B2E28BCBFCB00709892 /* FilterOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptionsView.swift; sourceTree = "<group>"; };
+		008F7FC528BD0E310092D1F6 /* MenuItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsTableViewCell.swift; sourceTree = "<group>"; };
 		00B2665428B78DA60018D510 /* EffectiveShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B2665728B78DA60018D510 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00B2665928B78DA60018D510 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +222,70 @@
 			path = BestSeller;
 			sourceTree = "<group>";
 		};
+		00564B1528BCBD5D00709892 /* AnimationsTransition */ = {
+			isa = PBXGroup;
+			children = (
+				00564B1828BCBD8700709892 /* Transition */,
+				00564B1728BCBD7A00709892 /* Presentation controller */,
+				00564B1628BCBD6B00709892 /* Animations */,
+			);
+			path = AnimationsTransition;
+			sourceTree = "<group>";
+		};
+		00564B1628BCBD6B00709892 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				00564B2328BCBE5B00709892 /* PresentAnimation.swift */,
+				00564B2528BCBE8300709892 /* DismissAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		00564B1728BCBD7A00709892 /* Presentation controller */ = {
+			isa = PBXGroup;
+			children = (
+				00564B1F28BCBE1900709892 /* PresentationController.swift */,
+				00564B2128BCBE3C00709892 /* DimmPresentationController.swift */,
+			);
+			path = "Presentation controller";
+			sourceTree = "<group>";
+		};
+		00564B1828BCBD8700709892 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				00564B1928BCBDAD00709892 /* PanelTransition.swift */,
+				00564B1B28BCBDD700709892 /* TransitionDriver.swift */,
+				00564B1D28BCBDFD00709892 /* TransitionDirection.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		00564B2928BCBF5F00709892 /* FiltersMenu */ = {
+			isa = PBXGroup;
+			children = (
+				00564B2B28BCBF8D00709892 /* Controller */,
+				00564B2A28BCBF8600709892 /* View */,
+			);
+			path = FiltersMenu;
+			sourceTree = "<group>";
+		};
+		00564B2A28BCBF8600709892 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00564B2E28BCBFCB00709892 /* FilterOptionsView.swift */,
+				008F7FC528BD0E310092D1F6 /* MenuItemsTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00564B2B28BCBF8D00709892 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00564B2C28BCBFB300709892 /* FilterOptionsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		00B2664B28B78DA60018D510 = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +379,7 @@
 			children = (
 				00B266AE28B7C7F70018D510 /* TabBarVC */,
 				00B266B128B7C9270018D510 /* MainScreen */,
+				00564B2928BCBF5F00709892 /* FiltersMenu */,
 				00B266B228B7C9300018D510 /* ProductDetails */,
 				00B266B328B7C9560018D510 /* MyCart */,
 				00B266B428B7C9800018D510 /* Favorits */,
@@ -318,6 +405,7 @@
 				00564AF728BA30BC00709892 /* UICollectionView+RegisterCell.swift */,
 				00564AF928BA323000709892 /* UIView+addSubviews.swift */,
 				00564B0A28BA898300709892 /* UIImageView+setImageColor.swift */,
+				00564B2728BCBEB400709892 /* CGPoint+Velocity.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -325,6 +413,7 @@
 		00B2667428B78ED50018D510 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				00564B1528BCBD5D00709892 /* AnimationsTransition */,
 				00B266DF28B939F00018D510 /* UILabel */,
 			);
 			path = UIComponents;
@@ -620,25 +709,36 @@
 				00B2669E28B7A68B0018D510 /* MainRequestFactory.swift in Sources */,
 				00B2668228B798FB0018D510 /* ResponseCodable.swift in Sources */,
 				00B266B928B7C9D90018D510 /* ProductDetailsViewController.swift in Sources */,
+				00564B1A28BCBDAD00709892 /* PanelTransition.swift in Sources */,
 				00564B0928BA64E300709892 /* SelectedCategoryItemsCell.swift in Sources */,
 				00B266A128B7AB850018D510 /* RequestFactory.swift in Sources */,
+				00564B2D28BCBFB300709892 /* FilterOptionsViewController.swift in Sources */,
 				00564B0B28BA898400709892 /* UIImageView+setImageColor.swift in Sources */,
 				00564B0028BA375700709892 /* SelectedCategoryCollectionViewCell.swift in Sources */,
+				00564B2428BCBE5B00709892 /* PresentAnimation.swift in Sources */,
 				00B266B028B7C85C0018D510 /* TabBarViewController.swift in Sources */,
+				008F7FC628BD0E310092D1F6 /* MenuItemsTableViewCell.swift in Sources */,
 				00B266B728B7C9C60018D510 /* MainScreenViewController.swift in Sources */,
 				00B2669C28B7A5810018D510 /* Main.swift in Sources */,
 				00564B0228BA377000709892 /* HotSalesCollectionViewCell.swift in Sources */,
 				00B2669528B79F330018D510 /* MainResult.swift in Sources */,
+				00564B2F28BCBFCB00709892 /* FilterOptionsView.swift in Sources */,
 				00B266A428B7B0C50018D510 /* ProductDetails.swift in Sources */,
+				00564B1C28BCBDD700709892 /* TransitionDriver.swift in Sources */,
 				00B266DD28B925180018D510 /* AppLabel.swift in Sources */,
 				00B266A928B7B3AD0018D510 /* MyCart.swift in Sources */,
 				00B2665A28B78DA60018D510 /* SceneDelegate.swift in Sources */,
 				00B266A628B7B0FA0018D510 /* ProductDetailsRequestFactory.swift in Sources */,
 				00B2669928B7A0830018D510 /* CartResult.swift in Sources */,
 				00B266C728B914620018D510 /* AppFont.swift in Sources */,
+				00564B2028BCBE1900709892 /* PresentationController.swift in Sources */,
+				00564B1E28BCBDFD00709892 /* TransitionDirection.swift in Sources */,
+				00564B2628BCBE8300709892 /* DismissAnimation.swift in Sources */,
 				00B2668628B799560018D510 /* AbstractErrorParser.swift in Sources */,
 				00B2667E28B798B10018D510 /* RequestRouter.swift in Sources */,
+				00564B2828BCBEB400709892 /* CGPoint+Velocity.swift in Sources */,
 				00B266C428B7E3CC0018D510 /* AppColor.swift in Sources */,
+				00564B2228BCBE3C00709892 /* DimmPresentationController.swift in Sources */,
 				00B266BD28B7CA000018D510 /* FavoritsViewController.swift in Sources */,
 				00564B1428BBFEB400709892 /* BestSellerItemsCell.swift in Sources */,
 				00B266AB28B7B4240018D510 /* MyCartRequestFactory.swift in Sources */,
