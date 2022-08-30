@@ -15,11 +15,11 @@ import Foundation
 // MARK: - Welcome
 struct ProductDitailResult: Codable {
     let cpu, camera: String?
-    let capacity, color: [String]?
-    let id: String
-    let images: [String]?
+    let capacity, color: [String]
+    let id: String?
+    let images: [String]
     let isFavorites: Bool?
-    let price: Int
+    let price: Int?
     let rating: Double?
     let sd, ssd, title: String?
 

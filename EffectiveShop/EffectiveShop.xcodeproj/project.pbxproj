@@ -31,6 +31,10 @@
 		00564B2D28BCBFB300709892 /* FilterOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B2C28BCBFB300709892 /* FilterOptionsViewController.swift */; };
 		00564B2F28BCBFCB00709892 /* FilterOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B2E28BCBFCB00709892 /* FilterOptionsView.swift */; };
 		008F7FC628BD0E310092D1F6 /* MenuItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008F7FC528BD0E310092D1F6 /* MenuItemsTableViewCell.swift */; };
+		00ADE45328BE13CA00583289 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADE45228BE13CA00583289 /* ProductDetailsView.swift */; };
+		00ADE45728BE155C00583289 /* HederProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADE45628BE155C00583289 /* HederProductDetailsView.swift */; };
+		00ADE45928BE157400583289 /* FooterProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADE45828BE157400583289 /* FooterProductDetailsView.swift */; };
+		00ADE45B28BE16B200583289 /* HederProductDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADE45A28BE16B200583289 /* HederProductDetailsCell.swift */; };
 		00B2665828B78DA60018D510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2665728B78DA60018D510 /* AppDelegate.swift */; };
 		00B2665A28B78DA60018D510 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2665928B78DA60018D510 /* SceneDelegate.swift */; };
 		00B2666128B78DA90018D510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B2666028B78DA90018D510 /* Assets.xcassets */; };
@@ -107,6 +111,10 @@
 		00564B2C28BCBFB300709892 /* FilterOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptionsViewController.swift; sourceTree = "<group>"; };
 		00564B2E28BCBFCB00709892 /* FilterOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptionsView.swift; sourceTree = "<group>"; };
 		008F7FC528BD0E310092D1F6 /* MenuItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsTableViewCell.swift; sourceTree = "<group>"; };
+		00ADE45228BE13CA00583289 /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
+		00ADE45628BE155C00583289 /* HederProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HederProductDetailsView.swift; sourceTree = "<group>"; };
+		00ADE45828BE157400583289 /* FooterProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterProductDetailsView.swift; sourceTree = "<group>"; };
+		00ADE45A28BE16B200583289 /* HederProductDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HederProductDetailsCell.swift; sourceTree = "<group>"; };
 		00B2665428B78DA60018D510 /* EffectiveShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B2665728B78DA60018D510 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00B2665928B78DA60018D510 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -291,6 +299,33 @@
 			children = (
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		00ADE45128BE138800583289 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00ADE45228BE13CA00583289 /* ProductDetailsView.swift */,
+				00ADE45428BE14EF00583289 /* HederView */,
+				00ADE45528BE150000583289 /* FooterView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00ADE45428BE14EF00583289 /* HederView */ = {
+			isa = PBXGroup;
+			children = (
+				00ADE45628BE155C00583289 /* HederProductDetailsView.swift */,
+				00ADE45A28BE16B200583289 /* HederProductDetailsCell.swift */,
+			);
+			path = HederView;
+			sourceTree = "<group>";
+		};
+		00ADE45528BE150000583289 /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				00ADE45828BE157400583289 /* FooterProductDetailsView.swift */,
+			);
+			path = FooterView;
 			sourceTree = "<group>";
 		};
 		00B2664B28B78DA60018D510 = {
@@ -538,6 +573,7 @@
 			children = (
 				008F7FC728BD240A0092D1F6 /* Controller */,
 				00B266B828B7C9D90018D510 /* ProductDetailsViewController.swift */,
+				00ADE45128BE138800583289 /* View */,
 			);
 			path = ProductDetails;
 			sourceTree = "<group>";
@@ -730,6 +766,7 @@
 				00B2669C28B7A5810018D510 /* Main.swift in Sources */,
 				00564B0228BA377000709892 /* HotSalesCollectionViewCell.swift in Sources */,
 				00B2669528B79F330018D510 /* MainResult.swift in Sources */,
+				00ADE45B28BE16B200583289 /* HederProductDetailsCell.swift in Sources */,
 				00564B2F28BCBFCB00709892 /* FilterOptionsView.swift in Sources */,
 				00B266A428B7B0C50018D510 /* ProductDetails.swift in Sources */,
 				00564B1C28BCBDD700709892 /* TransitionDriver.swift in Sources */,
@@ -750,10 +787,13 @@
 				00B266BD28B7CA000018D510 /* FavoritsViewController.swift in Sources */,
 				00564B1428BBFEB400709892 /* BestSellerItemsCell.swift in Sources */,
 				00B266AB28B7B4240018D510 /* MyCartRequestFactory.swift in Sources */,
+				00ADE45928BE157400583289 /* FooterProductDetailsView.swift in Sources */,
 				00564B0428BA378700709892 /* BestSellerCollectionViewCell.swift in Sources */,
+				00ADE45328BE13CA00583289 /* ProductDetailsView.swift in Sources */,
 				00B2669728B79FF40018D510 /* ProductDitailResult.swift in Sources */,
 				00B2668428B7991A0018D510 /* AbstractRequestFactory.swift in Sources */,
 				00564AF628BA2DD700709892 /* MainScreenView.swift in Sources */,
+				00ADE45728BE155C00583289 /* HederProductDetailsView.swift in Sources */,
 				00564B0F28BB85B000709892 /* HotSalesItemsCell.swift in Sources */,
 				00B266BF28B7CA170018D510 /* UserViewController.swift in Sources */,
 				00564AF828BA30BC00709892 /* UICollectionView+RegisterCell.swift in Sources */,

@@ -63,7 +63,6 @@ class MainScreenView: UIView {
     
     init() {
         super.init(frame: .zero)
-        backgroundColor = UIColor.systemPink.withAlphaComponent(0.1)
         setupLayout()
         
     }

@@ -10,9 +10,14 @@ import UIKit
 class ProductDetailsViewController: UIViewController {
     
     // MARK: - Private Properties
+    
+    private var productDetailsView: ProductDetailsView {
+        return self.view as! ProductDetailsView
+    }
+    
     private let requestFactory = RequestFactory()
     
-    var mainResult: MainResult = MainResult(homeStore: [], bestSeller: [])
+
     var productDitailResult: ProductDitailResult = ProductDitailResult(cpu: "",
                                                                        camera: "", capacity: [],
                                                                        color: [],
@@ -25,19 +30,45 @@ class ProductDetailsViewController: UIViewController {
                                                                        ssd: "",
                                                                        title: "")
     
+    // MARK: - Initialisers
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Lifecycle
+    
+    override func loadView() {
+        let view = ProductDetailsView()
+//        view.delegate = self
+        self.view = view
+        tabBarController?.tabBar.isHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = AppColor.backgraund
+        setNavigationBar()
         getProductDitail()
+        productDetailsView.configurate(productDitailResult: productDitailResult)
         
         
     }
-    
+
     // MARK: - Privat func
     
     private func setNavigationBar() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter"), style: .done, target: self, action: #selector(filterTapped))
-        navigationItem.rightBarButtonItem?.tintColor = AppColor.darkBlue
+        navigationItem.rightBarButtonItem?.tintColor = AppColor.orange
+        
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter"), style: .done, target: self, action: #selector(filterTapped))
+//        navigationItem.leftBarButtonItem?.tintColor = AppColor.darkBlue
+        
+//        navigationController?.title = "Product Details"
     }
     
     private func getProductDitail() {
@@ -49,7 +80,8 @@ class ProductDetailsViewController: UIViewController {
                 print(result)
                 self?.productDitailResult = result
                 DispatchQueue.main.async {
-                    self?.loadView()
+                    self?.viewDidLoad()
+                    
                 }
             case .failure(let error):
                 print(error.localizedDescription)
