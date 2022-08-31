@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Cosmos
 
 class FooterProductDetailsView: UIView {
     
@@ -53,6 +54,15 @@ class FooterProductDetailsView: UIView {
         
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }()
+    
+    private(set) var cosmoView: CosmosView = {
+        let cosmosView = CosmosView()
+        cosmosView.settings.fillMode = .half
+        cosmosView.settings.updateOnTouch = false
+        cosmosView.translatesAutoresizingMaskIntoConstraints = false
+
+        return cosmosView
     }()
     
     private(set) lazy var favoritButton: UIButton = {
@@ -173,7 +183,6 @@ class FooterProductDetailsView: UIView {
         //        collectionView.delegate = self
         //        collectionView.dataSource = self
         addSubviewsContent()
-        
     }
     
     override func layoutSubviews() {
@@ -196,6 +205,7 @@ extension FooterProductDetailsView {
         ssdLabel.text = data.ssd ?? ""
         sdLabel.text = data.sd ?? ""
         addToCartButton.setTitle("Add to cart        $\(String(describing: data.price ?? 0))", for: .normal)
+        cosmoView.rating = data.rating ?? 0.0
     
         }
     
@@ -222,7 +232,7 @@ private extension FooterProductDetailsView {
     
     func addSubviewsContent() {
         addSubview(conteinerView)
-        conteinerView.addSubviews([hederLabel, favoritButton, footerLabel, addToCartButton, CPUImageView, cameraImageView, ssdImageView, sdImageView, CPULabel, cameraLabel, ssdLabel, sdLabel])
+        conteinerView.addSubviews([hederLabel, cosmoView, favoritButton, footerLabel, addToCartButton, CPUImageView, cameraImageView, ssdImageView, sdImageView, CPULabel, cameraLabel, ssdLabel, sdLabel])
     }
     
     func configureUI() {
@@ -239,6 +249,11 @@ private extension FooterProductDetailsView {
             $0.leading.equalTo(conteinerView).offset(38)
             $0.trailing.equalTo(favoritButton.snp.leading).offset(-10)
             //            $0.width.equalTo(245)
+        }
+        
+        cosmoView.snp.makeConstraints {
+            $0.top.equalTo(hederLabel.snp.bottom).offset(7)
+            $0.leading.equalTo(conteinerView.snp.leading).offset(38)
         }
         
         favoritButton.snp.makeConstraints {
