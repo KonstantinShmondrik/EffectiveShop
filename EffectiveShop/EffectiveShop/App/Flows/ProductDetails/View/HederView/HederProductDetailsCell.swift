@@ -80,8 +80,7 @@ private extension HederProductDetailsCell {
         
         pictureImageView.snp.makeConstraints {
             $0.leading.trailing.equalTo(conteinerView).offset(0)
-            //                $0.height.equalTo(320)
-            $0.top.bottom.equalTo(conteinerView).offset(0)
+            $0.top.bottom.equalTo(conteinerView).offset(2)
         }
         
         conteinerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true

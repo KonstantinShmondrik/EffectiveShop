@@ -15,14 +15,7 @@ class SelectedColorItemsCell: UICollectionViewCell {
         
         override var isSelected: Bool {
             didSet {
-                categoryNamesLabel.textColor = isSelected ? AppColor.orange : .black
-                circularView.backgroundColor = isSelected ? AppColor.orange : .white
-                
-                if isSelected {
-                    categoryImageView.setImageColor(color: .white)
-                } else {
-                    categoryImageView.setImageColor(color: .gray)
-                }
+                checkMarkImageView.isHidden = isSelected ? false : true
             }
         }
         
@@ -36,31 +29,24 @@ class SelectedColorItemsCell: UICollectionViewCell {
         private(set) lazy var circularView: UIView = {
             let view = UIView(frame: frame)
             
-            view.layer.cornerRadius = 35
+            view.layer.cornerRadius = 20
             view.clipsToBounds = true
             view.backgroundColor = .white
             view.translatesAutoresizingMaskIntoConstraints = false
             return view
         }()
         
-        private(set) lazy var categoryImageView: UIImageView = {
+        private(set) lazy var checkMarkImageView: UIImageView = {
             let imageView = UIImageView(frame: .zero)
             imageView.contentMode = .scaleAspectFit
+            imageView.image = UIImage(named: "checkMark")
             imageView.layer.masksToBounds = true
-            imageView.setImageColor(color: .gray)
+            imageView.setImageColor(color: .white)
+            imageView.isHidden = true
             imageView.translatesAutoresizingMaskIntoConstraints = false
             return imageView
         }()
-        
-        private(set) lazy var categoryNamesLabel: UILabel = {
-            let label = AppLabel(alignment: .center,
-                                 fontSize: AppFont.markProFont(ofSize: 12, weight: .medium),
-                                 numberLines: 1)
-            label.translatesAutoresizingMaskIntoConstraints = false
-            return label
-        }()
-        
-        
+
         // MARK: - Init
         
         override init(frame: CGRect) {
@@ -71,6 +57,7 @@ class SelectedColorItemsCell: UICollectionViewCell {
         override func layoutSubviews() {
             super.layoutSubviews()
             configureUI()
+            
         }
         
         required init?(coder: NSCoder) {
@@ -81,9 +68,9 @@ class SelectedColorItemsCell: UICollectionViewCell {
 
     // MARK: - Configure Cell
     extension SelectedColorItemsCell {
-        func configurate(name: String, image: String) {
-            self.categoryImageView.image = UIImage(named: image)
-            self.categoryNamesLabel.text = name
+        func configurate(color: UIColor) {
+            self.circularView.backgroundColor = color
+           
         }
     }
 
@@ -92,34 +79,23 @@ class SelectedColorItemsCell: UICollectionViewCell {
         
         func addSubviewsContent() {
             contentView.addSubview(conteinerView)
-            conteinerView.addSubviews([circularView, categoryNamesLabel])
-            circularView.addSubview(categoryImageView)
+            conteinerView.addSubviews([circularView])
+            circularView.addSubview(checkMarkImageView)
         }
         
         func configureUI() {
-            conteinerView.backgroundColor = AppColor.backgraund
-            conteinerView.snp.makeConstraints {
-                $0.trailing.equalToSuperview().offset(0)
-                $0.leading.equalToSuperview().offset(0)
-                $0.height.equalTo(130)
-            }
+            conteinerView.backgroundColor = .white
             
             circularView.snp.makeConstraints {
-                $0.top.equalTo(conteinerView).offset(20)
-                $0.width.equalTo(70)
-                $0.height.equalTo(70)
+                $0.top.bottom.equalTo(conteinerView).offset(0)
+                $0.width.equalTo(40)
+                $0.height.equalTo(40)
                 $0.centerX.equalTo(conteinerView.snp.centerX)
             }
             
-            categoryImageView.snp.makeConstraints {
+            checkMarkImageView.snp.makeConstraints {
                 $0.center.equalTo(circularView.snp.center)
-                $0.height.equalTo(30)
-            }
-            
-            
-            categoryNamesLabel.snp.makeConstraints {
-                $0.top.equalTo(circularView.snp.bottom).offset(7)
-                $0.leading.trailing.equalTo(conteinerView)
+                $0.height.equalTo(13)
             }
 
             conteinerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true

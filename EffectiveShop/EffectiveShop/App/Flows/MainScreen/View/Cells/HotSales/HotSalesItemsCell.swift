@@ -156,7 +156,6 @@ private extension HotSalesItemsCell {
         
         pictureImageView.snp.makeConstraints {
             $0.leading.trailing.equalTo(conteinerView).offset(0)
-            $0.height.equalTo(184)
             $0.top.bottom.equalTo(conteinerView).offset(0)
         }
         

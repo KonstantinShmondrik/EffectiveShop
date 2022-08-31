@@ -32,6 +32,11 @@
 		00564B2F28BCBFCB00709892 /* FilterOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B2E28BCBFCB00709892 /* FilterOptionsView.swift */; };
 		008F7FC628BD0E310092D1F6 /* MenuItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008F7FC528BD0E310092D1F6 /* MenuItemsTableViewCell.swift */; };
 		0091B15E28BF7A280025D2EF /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 0091B15D28BF7A280025D2EF /* Cosmos */; };
+		0091B16128BF7E380025D2EF /* SelectedColorItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091B16028BF7E380025D2EF /* SelectedColorItemsCell.swift */; };
+		0091B16528BF7EE30025D2EF /* SelectedCopacityItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091B16428BF7EE30025D2EF /* SelectedCopacityItemsCell.swift */; };
+		0091B16728BF822F0025D2EF /* SelectedColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091B16628BF822F0025D2EF /* SelectedColorView.swift */; };
+		0091B16928BFACC30025D2EF /* UIColor+HEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091B16828BFACC30025D2EF /* UIColor+HEX.swift */; };
+		0091B16C28BFB9AA0025D2EF /* SelectedCopacityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091B16B28BFB9AA0025D2EF /* SelectedCopacityView.swift */; };
 		00ADE45328BE13CA00583289 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADE45228BE13CA00583289 /* ProductDetailsView.swift */; };
 		00ADE45728BE155C00583289 /* HederProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADE45628BE155C00583289 /* HederProductDetailsView.swift */; };
 		00ADE45928BE157400583289 /* FooterProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADE45828BE157400583289 /* FooterProductDetailsView.swift */; };
@@ -112,6 +117,11 @@
 		00564B2C28BCBFB300709892 /* FilterOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptionsViewController.swift; sourceTree = "<group>"; };
 		00564B2E28BCBFCB00709892 /* FilterOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptionsView.swift; sourceTree = "<group>"; };
 		008F7FC528BD0E310092D1F6 /* MenuItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsTableViewCell.swift; sourceTree = "<group>"; };
+		0091B16028BF7E380025D2EF /* SelectedColorItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedColorItemsCell.swift; sourceTree = "<group>"; };
+		0091B16428BF7EE30025D2EF /* SelectedCopacityItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCopacityItemsCell.swift; sourceTree = "<group>"; };
+		0091B16628BF822F0025D2EF /* SelectedColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedColorView.swift; sourceTree = "<group>"; };
+		0091B16828BFACC30025D2EF /* UIColor+HEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HEX.swift"; sourceTree = "<group>"; };
+		0091B16B28BFB9AA0025D2EF /* SelectedCopacityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCopacityView.swift; sourceTree = "<group>"; };
 		00ADE45228BE13CA00583289 /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
 		00ADE45628BE155C00583289 /* HederProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HederProductDetailsView.swift; sourceTree = "<group>"; };
 		00ADE45828BE157400583289 /* FooterProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterProductDetailsView.swift; sourceTree = "<group>"; };
@@ -303,6 +313,33 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		0091B15F28BF7DFD0025D2EF /* SelectedItemsCell */ = {
+			isa = PBXGroup;
+			children = (
+				0091B16228BF7E920025D2EF /* Color */,
+				0091B16328BF7E9D0025D2EF /* Capacity */,
+			);
+			path = SelectedItemsCell;
+			sourceTree = "<group>";
+		};
+		0091B16228BF7E920025D2EF /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				0091B16628BF822F0025D2EF /* SelectedColorView.swift */,
+				0091B16028BF7E380025D2EF /* SelectedColorItemsCell.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		0091B16328BF7E9D0025D2EF /* Capacity */ = {
+			isa = PBXGroup;
+			children = (
+				0091B16B28BFB9AA0025D2EF /* SelectedCopacityView.swift */,
+				0091B16428BF7EE30025D2EF /* SelectedCopacityItemsCell.swift */,
+			);
+			path = Capacity;
+			sourceTree = "<group>";
+		};
 		00ADE45128BE138800583289 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				00ADE45828BE157400583289 /* FooterProductDetailsView.swift */,
+				0091B15F28BF7DFD0025D2EF /* SelectedItemsCell */,
 			);
 			path = FooterView;
 			sourceTree = "<group>";
@@ -450,6 +488,7 @@
 				00564AF928BA323000709892 /* UIView+addSubviews.swift */,
 				00564B0A28BA898300709892 /* UIImageView+setImageColor.swift */,
 				00564B2728BCBEB400709892 /* CGPoint+Velocity.swift */,
+				0091B16828BFACC30025D2EF /* UIColor+HEX.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -753,6 +792,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00564AFA28BA323000709892 /* UIView+addSubviews.swift in Sources */,
+				0091B16528BF7EE30025D2EF /* SelectedCopacityItemsCell.swift in Sources */,
 				00B2665828B78DA60018D510 /* AppDelegate.swift in Sources */,
 				00B2669E28B7A68B0018D510 /* MainRequestFactory.swift in Sources */,
 				00B2668228B798FB0018D510 /* ResponseCodable.swift in Sources */,
@@ -773,8 +813,10 @@
 				00ADE45B28BE16B200583289 /* HederProductDetailsCell.swift in Sources */,
 				00564B2F28BCBFCB00709892 /* FilterOptionsView.swift in Sources */,
 				00B266A428B7B0C50018D510 /* ProductDetails.swift in Sources */,
+				0091B16928BFACC30025D2EF /* UIColor+HEX.swift in Sources */,
 				00564B1C28BCBDD700709892 /* TransitionDriver.swift in Sources */,
 				00B266DD28B925180018D510 /* AppLabel.swift in Sources */,
+				0091B16128BF7E380025D2EF /* SelectedColorItemsCell.swift in Sources */,
 				00B266A928B7B3AD0018D510 /* MyCart.swift in Sources */,
 				00B2665A28B78DA60018D510 /* SceneDelegate.swift in Sources */,
 				00B266A628B7B0FA0018D510 /* ProductDetailsRequestFactory.swift in Sources */,
@@ -783,10 +825,12 @@
 				00564B2028BCBE1900709892 /* PresentationController.swift in Sources */,
 				00564B1E28BCBDFD00709892 /* TransitionDirection.swift in Sources */,
 				00564B2628BCBE8300709892 /* DismissAnimation.swift in Sources */,
+				0091B16728BF822F0025D2EF /* SelectedColorView.swift in Sources */,
 				00B2668628B799560018D510 /* AbstractErrorParser.swift in Sources */,
 				00B2667E28B798B10018D510 /* RequestRouter.swift in Sources */,
 				00564B2828BCBEB400709892 /* CGPoint+Velocity.swift in Sources */,
 				00B266C428B7E3CC0018D510 /* AppColor.swift in Sources */,
+				0091B16C28BFB9AA0025D2EF /* SelectedCopacityView.swift in Sources */,
 				00564B2228BCBE3C00709892 /* DimmPresentationController.swift in Sources */,
 				00B266BD28B7CA000018D510 /* FavoritsViewController.swift in Sources */,
 				00564B1428BBFEB400709892 /* BestSellerItemsCell.swift in Sources */,

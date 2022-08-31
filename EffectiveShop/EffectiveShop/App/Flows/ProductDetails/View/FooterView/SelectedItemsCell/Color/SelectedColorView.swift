@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import SnapKit
 
 class SelectedColorView: UIView {
-
+    
     // MARK: - Properties
-    var pictures: [String] = []
+    var colors: [String] = []
     
     // MARK: - Outlets
     
@@ -25,14 +26,14 @@ class SelectedColorView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = AppColor.backgraund
+        collectionView.backgroundColor = .white
         collectionView.allowsSelection = true
         collectionView.isUserInteractionEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.layoutIfNeeded()
-        collectionView.registerClass(HederProductDetailsCell.self)
-        
+        collectionView.registerClass(SelectedColorItemsCell.self)
+
         return collectionView
         
     }()
@@ -47,12 +48,13 @@ class SelectedColorView: UIView {
         collectionView.dataSource = self
         collectionView.reloadData()
         addSubviewsContent()
-       
+        
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         configureUI()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -61,45 +63,48 @@ class SelectedColorView: UIView {
 }
 
 // MARK: - Configure View
-extension HederProductDetailsView {
+extension SelectedColorView {
     
-    func configurate(pictures: [String]) {
-        self.pictures = pictures
-        self.collectionView.reloadData()
+    func configurate(colors: [String]) {
+        self.colors = colors
+        collectionView.reloadData()
+        if collectionView.numberOfItems(inSection: 0) != 0 {
+            collectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
+        }
     }
     
 }
 
 // MARK: - Actions
-extension HederProductDetailsView {
+extension SelectedColorView {
     
 }
 
 // MARK: - UICollectionViewDelegate
-extension HederProductDetailsView: UICollectionViewDelegate {
+extension SelectedColorView: UICollectionViewDelegate {
     
 }
 
 // MARK: - UICollectionViewDataSource
-extension HederProductDetailsView: UICollectionViewDataSource {
+extension SelectedColorView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pictures.count
+        return colors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell: HederProductDetailsCell = collectionView.cell(forRowAt: indexPath) else {
+        guard let cell: SelectedColorItemsCell = collectionView.cell(forRowAt: indexPath) else {
             return UICollectionViewCell()
         }
-        let pictur = pictures[indexPath.row]
-        cell.configurate(image: pictur )
-       
+        let color = colors[indexPath.row]
+        cell.configurate(color: UIColor(hex: color) ?? .white)
+
         cell.layoutIfNeeded()
         return cell
     }
 }
 
 // MARK: - DidSelectItemAt
-extension HederProductDetailsView {
+extension SelectedColorView {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("нажата ячейка \(indexPath.item)")
@@ -107,30 +112,30 @@ extension HederProductDetailsView {
 }
 
 // MARK: - UICollectionViewDataSource
-extension HederProductDetailsView: UICollectionViewDelegateFlowLayout {
+extension SelectedColorView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: (collectionView.frame.width - 40-20)/1.5,
-                     height: 250)
+        return .init(width: (collectionView.frame.width - 10)/2,
+                     height: 40)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: (collectionView.frame.width - 40-20)/3, bottom: 0, right: (collectionView.frame.width - 40-20)/3)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 }
 
 // MARK: - Configure UI
-private extension HederProductDetailsView {
+private extension SelectedColorView {
     
     func addSubviewsContent() {
         addSubview(conteinerView)
@@ -138,22 +143,19 @@ private extension HederProductDetailsView {
     }
     
     func configureUI() {
-        conteinerView.backgroundColor = AppColor.backgraund
+        conteinerView.backgroundColor = .white
         conteinerView.snp.makeConstraints {
             $0.top.equalTo(self).offset(0)
             $0.leading.trailing.equalTo(self).offset(0)
-//            $0.height.equalTo(350)
             $0.bottom.equalTo(self).offset(0)
         }
         
         collectionView.snp.makeConstraints {
-            $0.top.equalTo(conteinerView).offset(4)
+            $0.top.equalTo(conteinerView).offset(0)
             $0.leading.equalTo(conteinerView).offset(0)
             $0.trailing.equalTo(conteinerView).offset(0)
-//            $0.height.equalTo(340)
-            $0.bottom.equalTo(conteinerView).offset(-4)
-            
+            $0.bottom.equalTo(conteinerView).offset(0)
         }
     }
-
+    
 }

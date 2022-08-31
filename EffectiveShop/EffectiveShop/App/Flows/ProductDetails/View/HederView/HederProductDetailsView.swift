@@ -114,7 +114,7 @@ extension HederProductDetailsView: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return .init(width: (collectionView.frame.width - 40-20)/1.5,
-                     height: 250)
+                     height: collectionView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView,

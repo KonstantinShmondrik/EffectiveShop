@@ -74,7 +74,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         navVC.navigationBar.barTintColor = AppColor.backgraund
         navVC.navigationBar.backgroundColor = AppColor.backgraund
         navVC.navigationBar.isTranslucent = true
-        navVC.navigationBar.prefersLargeTitles = false
+        navVC.navigationBar.prefersLargeTitles = true
         navVC.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
     }

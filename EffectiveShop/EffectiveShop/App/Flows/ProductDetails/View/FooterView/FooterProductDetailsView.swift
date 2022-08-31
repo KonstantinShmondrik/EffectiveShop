@@ -59,7 +59,7 @@ class FooterProductDetailsView: UIView {
     private(set) var cosmoView: CosmosView = {
         let cosmosView = CosmosView()
         cosmosView.settings.fillMode = .half
-        cosmosView.settings.updateOnTouch = false
+        cosmosView.settings.updateOnTouch = true
         cosmosView.translatesAutoresizingMaskIntoConstraints = false
 
         return cosmosView
@@ -176,12 +176,25 @@ class FooterProductDetailsView: UIView {
         return label
     }()
     
+    private(set) lazy var selectedColorView: SelectedColorView = {
+        let view = SelectedColorView()
+       
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private(set) lazy var selectedCopacityView: SelectedCopacityView = {
+        let view = SelectedCopacityView()
+       
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    
     // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //        collectionView.delegate = self
-        //        collectionView.dataSource = self
         addSubviewsContent()
     }
     
@@ -206,6 +219,8 @@ extension FooterProductDetailsView {
         sdLabel.text = data.sd ?? ""
         addToCartButton.setTitle("Add to cart        $\(String(describing: data.price ?? 0))", for: .normal)
         cosmoView.rating = data.rating ?? 0.0
+        selectedColorView.configurate(colors: data.color)
+        selectedCopacityView.configurate(copacityes: data.capacity)
     
         }
     
@@ -232,11 +247,10 @@ private extension FooterProductDetailsView {
     
     func addSubviewsContent() {
         addSubview(conteinerView)
-        conteinerView.addSubviews([hederLabel, cosmoView, favoritButton, footerLabel, addToCartButton, CPUImageView, cameraImageView, ssdImageView, sdImageView, CPULabel, cameraLabel, ssdLabel, sdLabel])
+        conteinerView.addSubviews([hederLabel, cosmoView, favoritButton, footerLabel, addToCartButton, CPUImageView, cameraImageView, ssdImageView, sdImageView, CPULabel, cameraLabel, ssdLabel, sdLabel, selectedColorView, selectedCopacityView])
     }
     
     func configureUI() {
-        //        conteinerView.backgroundColor = AppColor.backgraund
         conteinerView.snp.makeConstraints {
             $0.top.equalTo(self).offset(0)
             $0.leading.trailing.equalTo(self).offset(0)
@@ -264,7 +278,7 @@ private extension FooterProductDetailsView {
         }
         
         CPUImageView.snp.makeConstraints {
-            $0.top.equalTo(hederLabel.snp.bottom).offset(100)
+            $0.top.equalTo(hederLabel.snp.bottom).offset(80)
             $0.width.equalTo(28)
             $0.height.equalTo(28)
             $0.leading.equalTo(conteinerView.snp.leading).offset(45)
@@ -317,8 +331,24 @@ private extension FooterProductDetailsView {
             
         }
         
+        selectedColorView.snp.makeConstraints {
+            $0.top.equalTo(footerLabel.snp.bottom).offset(10)
+            $0.leading.equalTo(conteinerView).offset(38)
+            $0.width.equalTo(120)
+            $0.height.equalTo(40)
+            
+        }
+        
+        selectedCopacityView.snp.makeConstraints {
+            $0.top.equalTo(footerLabel.snp.bottom).offset(10)
+            $0.leading.equalTo(selectedColorView.snp.trailing).offset(10)
+            $0.trailing.equalTo(conteinerView).offset(-37)
+            $0.height.equalTo(40)
+            
+        }
+        
         addToCartButton.snp.makeConstraints {
-            $0.top.equalTo(footerLabel.snp.bottom).offset(81)
+            $0.top.equalTo(selectedColorView.snp.bottom).offset(20)
             $0.trailing.equalTo(conteinerView).offset(-30)
             $0.leading.equalTo(conteinerView).offset(30)
             $0.height.equalTo(55)

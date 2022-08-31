@@ -63,16 +63,15 @@ class ProductDetailsView: UIView {
         self.addSubviews([hederProductDetailsView, footerProductDetailsView])
         
         hederProductDetailsView.snp.makeConstraints {
-            $0.top.equalTo(self).offset(100)
+            $0.top.equalTo(self.safeAreaInsets).offset(0)
             $0.leading.trailing.equalTo(self).offset(0)
-            $0.height.equalTo(280)
-            //            $0.bottom.equalTo(self).offset(0)
         }
         
         footerProductDetailsView.snp.makeConstraints {
             $0.top.equalTo(hederProductDetailsView.snp.bottom).offset(0)
             $0.leading.trailing.equalTo(self).offset(0)
             $0.bottom.equalTo(self.snp.bottom).offset(0)
+            $0.height.equalTo(400)
         }
     }
 }
@@ -94,6 +93,7 @@ extension ProductDetailsView {
                                                               ssd: productDitailResult.ssd ?? "",
                                                               title: productDitailResult.title ?? ""))
         
+       
     }
 }
 
