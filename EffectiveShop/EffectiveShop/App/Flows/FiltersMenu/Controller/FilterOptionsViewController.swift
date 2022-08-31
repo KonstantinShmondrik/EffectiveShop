@@ -11,7 +11,7 @@ class FilterOptionsViewController: UIViewController {
     // MARK: - Properties
     
 
-    private var passwordCategoryView: FilterOptionsView {
+    private var filterOptionsView: FilterOptionsView {
         return self.view as! FilterOptionsView
     }
     
@@ -30,7 +30,7 @@ class FilterOptionsViewController: UIViewController {
     override func loadView() {
         super.loadView()
         self.view = FilterOptionsView()
-        self.passwordCategoryView.delegate = self
+        self.filterOptionsView.delegate = self
     }
     
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class FilterOptionsViewController: UIViewController {
         view.backgroundColor = .white
         self.view = FilterOptionsView()
         view.layer.cornerRadius = 24
-        self.passwordCategoryView.delegate = self
+        self.filterOptionsView.delegate = self
         
     }
 }

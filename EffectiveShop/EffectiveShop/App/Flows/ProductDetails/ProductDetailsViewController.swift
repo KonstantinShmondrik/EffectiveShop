@@ -8,22 +8,102 @@
 import UIKit
 
 class ProductDetailsViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    // MARK: - Private Properties
+    
+    private var productDetailsView: ProductDetailsView {
+        return self.view as! ProductDetailsView
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private let requestFactory = RequestFactory()
+    
+    
+    var productDitailResult: ProductDitailResult = ProductDitailResult(cpu: "",
+                                                                       camera: "", capacity: [],
+                                                                       color: [],
+                                                                       id: "",
+                                                                       images: [],
+                                                                       isFavorites: false,
+                                                                       price: 0,
+                                                                       rating: 0.0,
+                                                                       sd: "",
+                                                                       ssd: "",
+                                                                       title: "")
+    
+    // MARK: - Initialisers
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
     }
-    */
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Lifecycle
+    
+    override func loadView() {
+        let view = ProductDetailsView()
+        //        view.delegate = self
+        self.view = view
+        tabBarController?.tabBar.isHidden = true
+        getProductDitail()
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = AppColor.backgraund
+        setNavigationBar()
+        productDetailsView.configurate(productDitailResult: productDitailResult)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.isTranslucent = true
+        tabBarController?.tabBar.isHidden = false
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    
+    // MARK: - Privat func
+    
+    private func setNavigationBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "bag"), style: .done, target: self, action: #selector(toCartTapped))
+        navigationItem.rightBarButtonItem?.tintColor = AppColor.orange
+        navigationController?.navigationBar.isTranslucent = false
+        navigationItem.title = "Product Details"
+        navigationController?.navigationBar.prefersLargeTitles = false
+        //        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter"), style: .done, target: self, action: #selector(filterTapped))
+        //        navigationItem.leftBarButtonItem?.tintColor = AppColor.darkBlue
+        
+        //        navigationController?.text = "Product Details"
+    }
+    
+    private func getProductDitail() {
+        
+        let productDitails = requestFactory.makeProductDetailsRequestFactory()
+        productDitails.getProductDetails() { [weak self] response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+                self?.productDitailResult = result
+                DispatchQueue.main.async {
+                    self?.viewDidLoad()
+                    
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    // MARK: - Actions
+    @objc func toCartTapped (sender: UIBarButtonItem) {
+        print("Tapped to Cart")
+    }
+    
 }
+
+
+
+
