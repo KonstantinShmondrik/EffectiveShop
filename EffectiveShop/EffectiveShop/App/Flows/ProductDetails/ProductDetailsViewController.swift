@@ -59,6 +59,7 @@ class ProductDetailsViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         navigationController?.navigationBar.isTranslucent = true
         tabBarController?.tabBar.isHidden = false
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -99,7 +100,7 @@ class ProductDetailsViewController: UIViewController {
     
     // MARK: - Actions
     @objc func toCartTapped (sender: UIBarButtonItem) {
-        print("Tapped to Cart")
+        self.tabBarController?.selectedIndex = 1
     }
     
 }
