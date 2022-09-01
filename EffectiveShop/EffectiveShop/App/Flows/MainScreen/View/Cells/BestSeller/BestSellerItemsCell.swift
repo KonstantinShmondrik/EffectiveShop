@@ -113,8 +113,8 @@ class BestSellerItemsCell: UICollectionViewCell {
 extension BestSellerItemsCell {
     func configurate(data: BestSellerItemsCell.ViewData) {
         self.brendLabel.text = data.title ?? ""
-        self.discountPriceLabel.text = String("$\(data.discountPrice ?? 0)")
-        self.priceWithoutDiscountLabel.text = String("$\(data.priceWithoutDiscount ?? 0)")
+        self.discountPriceLabel.text = "\((data.discountPrice ?? 0).formattedString)"
+        self.priceWithoutDiscountLabel.text = "\((data.priceWithoutDiscount ?? 0).formattedString)"
         
         guard let imageString = data.picture else { return }
         guard let url = URL(string: imageString) else { return }

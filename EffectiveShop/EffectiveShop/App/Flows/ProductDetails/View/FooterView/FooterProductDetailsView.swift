@@ -23,7 +23,7 @@ class FooterProductDetailsView: UIView {
     }
     
     // MARK: - Properties
-    //    var pictures: [String] = [" "]
+    
     
     // MARK: - Outlets
     
@@ -101,7 +101,7 @@ class FooterProductDetailsView: UIView {
         imageView.contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
         imageView.image = UIImage(named: "CPU")
-        //        imageView.setImageColor(color: .gray)
+                imageView.setImageColor(color: .gray)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -111,7 +111,7 @@ class FooterProductDetailsView: UIView {
         imageView.contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
         imageView.image = UIImage(named: "camera")
-        //        imageView.setImageColor(color: .gray)
+                imageView.setImageColor(color: .gray)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -121,7 +121,7 @@ class FooterProductDetailsView: UIView {
         imageView.contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
         imageView.image = UIImage(named: "ssd")
-        //        imageView.setImageColor(color: .gray)
+                imageView.setImageColor(color: .gray)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -131,7 +131,7 @@ class FooterProductDetailsView: UIView {
         imageView.contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
         imageView.image = UIImage(named: "sd")
-        //        imageView.setImageColor(color: .gray)
+                imageView.setImageColor(color: .gray)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -217,7 +217,7 @@ extension FooterProductDetailsView {
         cameraLabel.text = data.camera ?? ""
         ssdLabel.text = data.ssd ?? ""
         sdLabel.text = data.sd ?? ""
-        addToCartButton.setTitle("Add to cart        $\(String(describing: data.price ?? 0))", for: .normal)
+        addToCartButton.setTitle("Add to cart        \((data.price ?? 0).formattedString)", for: .normal)
         cosmoView.rating = data.rating ?? 0.0
         selectedColorView.configurate(colors: data.color)
         selectedCopacityView.configurate(copacityes: data.capacity)
@@ -254,15 +254,13 @@ private extension FooterProductDetailsView {
         conteinerView.snp.makeConstraints {
             $0.top.equalTo(self).offset(0)
             $0.leading.trailing.equalTo(self).offset(0)
-            //            $0.height.equalTo(350)
             $0.bottom.equalTo(self).offset(0)
         }
-        hederLabel.text = "Galaxy Note 20 Ultra" // для теста
+        
         hederLabel.snp.makeConstraints {
             $0.top.equalTo(conteinerView).offset(28)
             $0.leading.equalTo(conteinerView).offset(38)
             $0.trailing.equalTo(favoritButton.snp.leading).offset(-10)
-            //            $0.width.equalTo(245)
         }
         
         cosmoView.snp.makeConstraints {

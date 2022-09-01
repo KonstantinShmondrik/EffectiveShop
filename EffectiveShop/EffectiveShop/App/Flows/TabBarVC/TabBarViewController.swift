@@ -25,7 +25,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         tabBar.clipsToBounds = true
         
         
-        let mainVC = UINavigationController(rootViewController:MainScreenViewController())
+        let mainVC = UINavigationController(rootViewController: MainScreenViewController())
         
         let tabBarItemMain = UITabBarItem(title: nil,
                                           image: UIImage(systemName: "app")?.withRenderingMode(UIImage.RenderingMode.automatic),
@@ -35,7 +35,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         configuredNavigationController(navVC: mainVC)
         
         
-        let cartVC = UINavigationController(rootViewController:MyCartViewController())
+        let cartVC = UINavigationController(rootViewController: MyCartViewController())
         
         let tabBarItemcart = UITabBarItem(title: nil,
                                               image: UIImage(systemName: "bag")?.withRenderingMode(UIImage.RenderingMode.automatic),
@@ -44,7 +44,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         cartVC.tabBarItem = tabBarItemcart
         configuredNavigationController(navVC: cartVC)
         
-        let favoritVC = UINavigationController(rootViewController:FavoritsViewController())
+        let favoritVC = UINavigationController(rootViewController: FavoritsViewController())
         
         let tabBarItemFavorit = UITabBarItem(title: nil,
                                               image: UIImage(systemName: "heart")?.withRenderingMode(UIImage.RenderingMode.automatic),
@@ -54,7 +54,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         configuredNavigationController(navVC: favoritVC)
         
         
-        let userVC = UINavigationController(rootViewController:UserViewController())
+        let userVC = UINavigationController(rootViewController: UserViewController())
         
         let tabBarItemUser = UITabBarItem(title: nil,
                                               image: UIImage(systemName: "person")?.withRenderingMode(UIImage.RenderingMode.automatic),
