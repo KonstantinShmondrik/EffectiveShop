@@ -16,6 +16,7 @@ enum MainScreenItems: String {
 }
 protocol MainScreenViewProtocol {
     func showProductDitail()
+    func buyHotSalesButtonTapped(_ index: Int)
     
 }
 
@@ -124,7 +125,7 @@ extension MainScreenView: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HotSalesCollectionViewCell.reuseIdentifier, for: indexPath) as? HotSalesCollectionViewCell else {return UICollectionViewCell()}
             
             cell.configurate(homeStore: mainResult.homeStore)
-            
+            cell.delegate = self
             cell.layoutIfNeeded()
             
             return cell
@@ -151,6 +152,12 @@ extension MainScreenView: UICollectionViewDelegateFlowLayout {
 extension MainScreenView: BestSellerCollectionViewCellProtocol {
     func showProductDitail() {
         delegate?.showProductDitail()
+    }
+}
+
+extension MainScreenView: HotSalesCollectionViewCellProtocol {
+    func buyButtonTapped(_ index: Int) {
+        delegate?.buyHotSalesButtonTapped(index)
     }
     
     

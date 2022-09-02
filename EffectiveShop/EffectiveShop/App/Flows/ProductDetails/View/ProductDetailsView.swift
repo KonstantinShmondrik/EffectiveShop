@@ -8,29 +8,29 @@
 import UIKit
 import SnapKit
 
+protocol ProductDetailsViewProtocol {
+    func buyButtonTapped()
+}
+
 class ProductDetailsView: UIView {
     
     // MARK: - Outlets
     private(set) lazy var hederProductDetailsView: HederProductDetailsView = {
         let view = HederProductDetailsView()
-        //        view.pictures = productDitailResult.images
-        
-        
-        
+
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private(set) lazy var footerProductDetailsView: FooterProductDetailsView = {
         let view = FooterProductDetailsView()
-        
-        
-        
+
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     // MARK: - Properties
+    var delegate: ProductDetailsViewProtocol?
     
     var productDitailResult: ProductDitailResult = ProductDitailResult(cpu: "",
                                                                        camera: "", capacity: [],
@@ -49,6 +49,7 @@ class ProductDetailsView: UIView {
     init() {
         super.init(frame: .zero)
         setupLayout()
+        self.footerProductDetailsView.delegate = self
         
     }
     
@@ -97,3 +98,10 @@ extension ProductDetailsView {
     }
 }
 
+extension ProductDetailsView :FooterProductDetailsVieProtocol {
+    func buyButtonTapped() {
+        delegate?.buyButtonTapped()
+    }
+    
+    
+}

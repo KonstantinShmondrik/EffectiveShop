@@ -144,10 +144,12 @@ extension MyCartViewController: FooterBasketTableViewCellProtocol {
         alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: {_ in
             UIView.animate(withDuration: 0.2) {
                 self.tabBarController?.selectedIndex = 0
+                self.tabBarController?.viewDidLoad()
+                self.cartResult.basket = []
             }
         }))
         self.present(alert, animated: true, completion: {
-            self.cartResult.basket = []
+            AppBasket.shared.items = []
             self.tableView.reloadData()
         })
     }

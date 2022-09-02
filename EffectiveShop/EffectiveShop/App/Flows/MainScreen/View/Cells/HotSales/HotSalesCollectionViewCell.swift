@@ -8,11 +8,18 @@
 import UIKit
 import SnapKit
 
+protocol HotSalesCollectionViewCellProtocol {
+    func buyButtonTapped(_ index: Int)
+}
+
+
 class HotSalesCollectionViewCell: UICollectionViewCell {
     static var reuseIdentifier = "HotSalesCollectionViewCell"
     
     // MARK: - Properties
     var homeStore: [HomeStore] = []
+    var delegate: HotSalesCollectionViewCellProtocol?
+    
     
     // MARK: - Outlets
     
@@ -122,6 +129,8 @@ extension HotSalesCollectionViewCell: UICollectionViewDataSource {
                                      picture: homeStore.picture ?? "",
                                      isBuy: homeStore.isBuy ?? false
                                     ))
+        cell.row = indexPath.row
+        cell.delegate = self
         
         cell.layoutIfNeeded()
         return cell
@@ -205,3 +214,9 @@ private extension HotSalesCollectionViewCell {
     }
 }
 
+extension HotSalesCollectionViewCell: HotSalesItemsCellProtocol {
+    func buyButtonTapped(_ index: Int) {
+        delegate?.buyButtonTapped(index)
+    }
+
+}

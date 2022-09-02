@@ -41,6 +41,7 @@
 		00A88D6928C0C06A004F6452 /* FooterCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A88D6828C0C06A004F6452 /* FooterCartTableViewCell.swift */; };
 		00A88D6B28C0EB26004F6452 /* Int+formattedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A88D6A28C0EB26004F6452 /* Int+formattedString.swift */; };
 		00A88D7028C12D93004F6452 /* CartQuantityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A88D6F28C12D93004F6452 /* CartQuantityButton.swift */; };
+		00A88D7328C213FE004F6452 /* AppBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A88D7228C213FE004F6452 /* AppBasket.swift */; };
 		00ADE45328BE13CA00583289 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADE45228BE13CA00583289 /* ProductDetailsView.swift */; };
 		00ADE45728BE155C00583289 /* HederProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADE45628BE155C00583289 /* HederProductDetailsView.swift */; };
 		00ADE45928BE157400583289 /* FooterProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADE45828BE157400583289 /* FooterProductDetailsView.swift */; };
@@ -130,6 +131,7 @@
 		00A88D6828C0C06A004F6452 /* FooterCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCartTableViewCell.swift; sourceTree = "<group>"; };
 		00A88D6A28C0EB26004F6452 /* Int+formattedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+formattedString.swift"; sourceTree = "<group>"; };
 		00A88D6F28C12D93004F6452 /* CartQuantityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartQuantityButton.swift; sourceTree = "<group>"; };
+		00A88D7228C213FE004F6452 /* AppBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBasket.swift; sourceTree = "<group>"; };
 		00ADE45228BE13CA00583289 /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
 		00ADE45628BE155C00583289 /* HederProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HederProductDetailsView.swift; sourceTree = "<group>"; };
 		00ADE45828BE157400583289 /* FooterProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterProductDetailsView.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 		008F7FC728BD240A0092D1F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				00B266B828B7C9D90018D510 /* ProductDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -371,6 +374,14 @@
 				00A88D6F28C12D93004F6452 /* CartQuantityButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		00A88D7128C213E6004F6452 /* AppBasket */ = {
+			isa = PBXGroup;
+			children = (
+				00A88D7228C213FE004F6452 /* AppBasket.swift */,
+			);
+			path = AppBasket;
 			sourceTree = "<group>";
 		};
 		00ADE45128BE138800583289 /* View */ = {
@@ -446,6 +457,7 @@
 		00B2666C28B78E220018D510 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				00A88D7128C213E6004F6452 /* AppBasket */,
 				00B2666E28B78E460018D510 /* Network */,
 				00B2666D28B78E380018D510 /* AppStartManager */,
 			);
@@ -648,7 +660,6 @@
 			isa = PBXGroup;
 			children = (
 				008F7FC728BD240A0092D1F6 /* Controller */,
-				00B266B828B7C9D90018D510 /* ProductDetailsViewController.swift */,
 				00ADE45128BE138800583289 /* View */,
 			);
 			path = ProductDetails;
@@ -839,6 +850,7 @@
 				00564B2D28BCBFB300709892 /* FilterOptionsViewController.swift in Sources */,
 				00564B0B28BA898400709892 /* UIImageView+setImageColor.swift in Sources */,
 				00A88D6728C0C01A004F6452 /* CartTableViewCell.swift in Sources */,
+				00A88D7328C213FE004F6452 /* AppBasket.swift in Sources */,
 				00564B0028BA375700709892 /* SelectedCategoryCollectionViewCell.swift in Sources */,
 				00564B2428BCBE5B00709892 /* PresentAnimation.swift in Sources */,
 				00B266B028B7C85C0018D510 /* TabBarViewController.swift in Sources */,

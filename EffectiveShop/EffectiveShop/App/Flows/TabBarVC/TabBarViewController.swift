@@ -37,11 +37,13 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         
         let cartVC = UINavigationController(rootViewController: MyCartViewController())
         
-        let tabBarItemcart = UITabBarItem(title: nil,
+        let tabBarItemCart = UITabBarItem(title: nil,
                                               image: UIImage(systemName: "bag")?.withRenderingMode(UIImage.RenderingMode.automatic),
                                               selectedImage: UIImage(systemName: "bag.fill")?.withRenderingMode(UIImage.RenderingMode.automatic))
         
-        cartVC.tabBarItem = tabBarItemcart
+        
+        
+        cartVC.tabBarItem = tabBarItemCart
         configuredNavigationController(navVC: cartVC)
         
         let favoritVC = UINavigationController(rootViewController: FavoritsViewController())
@@ -64,12 +66,11 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         configuredNavigationController(navVC: userVC)
        
         self.viewControllers = [mainVC, cartVC, favoritVC, userVC]
-      
-
         
-     
-        
+        setBadgeValue(barItem: tabBarItemCart, valu: AppBasket.shared.items.count)
+    
     }
+    
     private func configuredNavigationController (navVC: UINavigationController) {
         navVC.navigationBar.barTintColor = AppColor.backgraund
         navVC.navigationBar.backgroundColor = AppColor.backgraund
@@ -78,4 +79,12 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         navVC.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navVC.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
     }
+    
+    private func setBadgeValue(barItem: UITabBarItem, valu: Int ) {
+        if valu != 0 {
+        barItem.badgeValue = String(valu)
+        }
+    }
+    
+    
 }

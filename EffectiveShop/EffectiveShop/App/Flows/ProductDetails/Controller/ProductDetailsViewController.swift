@@ -46,6 +46,7 @@ class ProductDetailsViewController: UIViewController {
         let view = ProductDetailsView()
         //        view.delegate = self
         self.view = view
+        view.delegate = self
         tabBarController?.tabBar.isHidden = true
         getProductDitail()
         
@@ -56,6 +57,7 @@ class ProductDetailsViewController: UIViewController {
         view.backgroundColor = AppColor.backgraund
         setNavigationBar()
         productDetailsView.configurate(productDitailResult: productDitailResult)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -105,6 +107,19 @@ class ProductDetailsViewController: UIViewController {
     
 }
 
-
+extension ProductDetailsViewController: ProductDetailsViewProtocol {
+    func buyButtonTapped() {
+        let item = AppBasketItem(productId: Int(productDitailResult.id ?? ""),
+                                 productName: productDitailResult.title,
+                                 price: productDitailResult.price,
+                                 picUrl: productDitailResult.images.first)
+        
+        AppBasket.shared.items.append(item)
+        self.tabBarController?.viewDidLoad()
+    }
+    
+    
+    
+}
 
 

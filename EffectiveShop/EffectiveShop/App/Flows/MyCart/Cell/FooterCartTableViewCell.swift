@@ -132,6 +132,7 @@ class FooterCartTableViewCell: UITableViewHeaderFooterView {
     
     @objc private func payBasketButtonPressed() {
         delegate?.pressPayButton()
+        
     }
     
     

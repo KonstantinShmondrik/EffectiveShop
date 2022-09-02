@@ -49,6 +49,13 @@ class MainScreenViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isTranslucent = true
+        tabBarController?.tabBar.isHidden = false
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+
     // MARK: - Privat func
     
     private func setNavigationBar() {
@@ -89,6 +96,18 @@ class MainScreenViewController: UIViewController {
 }
 
 extension MainScreenViewController: MainScreenViewProtocol {
+    func buyHotSalesButtonTapped(_ index: Int) {
+        let homeStore = mainResult.homeStore[index]
+        
+        let item = AppBasketItem(productId: homeStore.id,
+                                 productName: homeStore.title,
+                                 price: nil,
+                                 picUrl: homeStore.picture)
+        
+        AppBasket.shared.items.append(item)
+        tabBarController?.viewDidLoad()
+    }
+    
     func showProductDitail() {
         navigationController?.pushViewController(ProductDetailsViewController(), animated: true)
     }

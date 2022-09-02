@@ -9,6 +9,10 @@ import UIKit
 import SnapKit
 import Cosmos
 
+protocol FooterProductDetailsVieProtocol {
+    func buyButtonTapped()
+}
+
 class FooterProductDetailsView: UIView {
     
     
@@ -23,7 +27,7 @@ class FooterProductDetailsView: UIView {
     }
     
     // MARK: - Properties
-    
+    var delegate: FooterProductDetailsVieProtocol?
     
     // MARK: - Outlets
     
@@ -234,7 +238,7 @@ extension FooterProductDetailsView {
         
     }
     @objc func addCartButtonPressed() {
-        print ("Press button to favorit")
+        delegate?.buyButtonTapped()
         
     }
     

@@ -9,8 +9,15 @@ import UIKit
 import SnapKit
 import SDWebImage
 
+protocol HotSalesItemsCellProtocol {
+    func buyButtonTapped(_ index: Int)
+}
+
 class HotSalesItemsCell: UICollectionViewCell {
     static var reuseIdentifier = "HotSalesItemsCell"
+    
+    var delegate: HotSalesItemsCellProtocol?
+    var row: Int?
     
     struct ViewData {
         let id: Int?
@@ -135,7 +142,8 @@ extension HotSalesItemsCell {
 extension HotSalesItemsCell {
     
     @objc func buyButtonPressed() {
-        print ("Press button Buy now")
+        delegate?.buyButtonTapped(row ?? 0)
+        
         
     }
 }
