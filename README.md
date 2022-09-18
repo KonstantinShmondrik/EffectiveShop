@@ -18,5 +18,5 @@
 - Cosmos (для отображения рейтинга товара)
 - SnapKit (для верстки UI)
 
-![image](https://github.com/KonstantinShmondrik/EffectiveShop/blob/main/showTest.GIF)
+![screen-gif](https://github.com/KonstantinShmondrik/EffectiveShop/blob/main/showTest.GIF)
 
