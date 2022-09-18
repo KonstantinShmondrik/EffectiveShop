@@ -10,7 +10,7 @@
 
 ### Стек:
 - Swift  
-- Clean MVC, верстка кодом
+- MVVM, верстка кодом
 - UXTest
 #### SPM:
 - Alamofire (для сетевых запросов)
