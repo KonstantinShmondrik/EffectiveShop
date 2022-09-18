@@ -89,6 +89,7 @@
 		00B266DE28B925180018D510 /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266DC28B925180018D510 /* AppLabel.swift */; };
 		00FCC6AD28D63F21000BF4B7 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCC6AC28D63F21000BF4B7 /* MainScreenViewModel.swift */; };
 		00FCC6B028D77FF7000BF4B7 /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCC6AF28D77FF7000BF4B7 /* ProductDetailsViewModel.swift */; };
+		00FCC6B328D78509000BF4B7 /* MyCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCC6B228D78509000BF4B7 /* MyCartViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +179,7 @@
 		00B266DC28B925180018D510 /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
 		00FCC6AC28D63F21000BF4B7 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
 		00FCC6AF28D77FF7000BF4B7 /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
+		00FCC6B228D78509000BF4B7 /* MyCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -676,6 +678,7 @@
 			children = (
 				00A88D6528C0BFD6004F6452 /* Controller */,
 				00A88D6428C0BFCD004F6452 /* Cell */,
+				00FCC6B128D784B6000BF4B7 /* ViewModel */,
 			);
 			path = MyCart;
 			sourceTree = "<group>";
@@ -736,6 +739,14 @@
 			isa = PBXGroup;
 			children = (
 				00FCC6AF28D77FF7000BF4B7 /* ProductDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		00FCC6B128D784B6000BF4B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				00FCC6B228D78509000BF4B7 /* MyCartViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -898,6 +909,7 @@
 				00564B1E28BCBDFD00709892 /* TransitionDirection.swift in Sources */,
 				00564B2628BCBE8300709892 /* DismissAnimation.swift in Sources */,
 				00FCC6AD28D63F21000BF4B7 /* MainScreenViewModel.swift in Sources */,
+				00FCC6B328D78509000BF4B7 /* MyCartViewModel.swift in Sources */,
 				0091B16728BF822F0025D2EF /* SelectedColorView.swift in Sources */,
 				00B2668628B799560018D510 /* AbstractErrorParser.swift in Sources */,
 				00B2667E28B798B10018D510 /* RequestRouter.swift in Sources */,

@@ -35,7 +35,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         configuredNavigationController(navVC: mainVC)
         
         
-        let cartVC = UINavigationController(rootViewController: MyCartViewController())
+        let cartVC = UINavigationController(rootViewController: MyCartViewController(viewModel: MyCartViewModel()))
         
         let tabBarItemCart = UITabBarItem(title: nil,
                                               image: UIImage(systemName: "bag")?.withRenderingMode(UIImage.RenderingMode.automatic),

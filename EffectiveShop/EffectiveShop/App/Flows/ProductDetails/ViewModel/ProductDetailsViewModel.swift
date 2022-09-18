@@ -23,7 +23,7 @@ final class ProductDetailsViewModel {
     
     private let requestFactory = RequestFactory()
     
-   func getProductDitail(viewController: UIViewController) {
+    func getProductDitail(viewController: UIViewController) {
         
         let productDitails = requestFactory.makeProductDetailsRequestFactory()
         productDitails.getProductDetails() { [weak self] response in
@@ -33,12 +33,10 @@ final class ProductDetailsViewModel {
                 self?.productDitailResult = result
                 DispatchQueue.main.async {
                     viewController.viewDidLoad()
-                    
                 }
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
     }
-    
 }
