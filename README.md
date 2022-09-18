@@ -17,3 +17,6 @@
 - SDWebImage (для отображения изображений по URL)
 - Cosmos (для отображения рейтинга товара)
 - SnapKit (для верстки UI)
+
+![image](https://github.com/KonstantinShmondrik/EffectiveShop/blob/main/showTest.GIF)
+
