@@ -87,6 +87,7 @@
 		00B266DB28B9226C0018D510 /* MarkPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00B266D928B9226C0018D510 /* MarkPro-Medium.ttf */; };
 		00B266DD28B925180018D510 /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266DC28B925180018D510 /* AppLabel.swift */; };
 		00B266DE28B925180018D510 /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266DC28B925180018D510 /* AppLabel.swift */; };
+		00FCC6AD28D63F21000BF4B7 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCC6AC28D63F21000BF4B7 /* MainScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +175,7 @@
 		00B266D628B922600018D510 /* MarkPro-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Heavy.ttf"; sourceTree = "<group>"; };
 		00B266D928B9226C0018D510 /* MarkPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Medium.ttf"; sourceTree = "<group>"; };
 		00B266DC28B925180018D510 /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
+		00FCC6AC28D63F21000BF4B7 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -652,6 +654,7 @@
 			children = (
 				00564AF328BA2D7800709892 /* Controller */,
 				00564AF428BA2D9400709892 /* View */,
+				00FCC6AB28D63EF1000BF4B7 /* ViewModel */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -716,6 +719,14 @@
 				00B266DC28B925180018D510 /* AppLabel.swift */,
 			);
 			path = UILabel;
+			sourceTree = "<group>";
+		};
+		00FCC6AB28D63EF1000BF4B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				00FCC6AC28D63F21000BF4B7 /* MainScreenViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -875,6 +886,7 @@
 				00564B2028BCBE1900709892 /* PresentationController.swift in Sources */,
 				00564B1E28BCBDFD00709892 /* TransitionDirection.swift in Sources */,
 				00564B2628BCBE8300709892 /* DismissAnimation.swift in Sources */,
+				00FCC6AD28D63F21000BF4B7 /* MainScreenViewModel.swift in Sources */,
 				0091B16728BF822F0025D2EF /* SelectedColorView.swift in Sources */,
 				00B2668628B799560018D510 /* AbstractErrorParser.swift in Sources */,
 				00B2667E28B798B10018D510 /* RequestRouter.swift in Sources */,

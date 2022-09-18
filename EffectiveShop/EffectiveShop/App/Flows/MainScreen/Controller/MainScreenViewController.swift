@@ -7,22 +7,18 @@
 
 import UIKit
 
+
 class MainScreenViewController: UIViewController {
     
     // MARK: - Private Properties
     private let requestFactory = RequestFactory()
     private let transition = PanelTransition()
+    private let viewModel: MainScreenViewModel
     
-    // MARK: - Properties
-    
-    var mainResult: MainResult = MainResult(homeStore: [], bestSeller: [])
-    var selectItems: [SelectItems] = [SelectItems(name: "Phones", image: "phone"),
-                                      SelectItems(name: "Computer", image: "computer"),
-                                      SelectItems(name: "Heals", image: "health"),
-                                      SelectItems(name: "Books", image: "books")]
     // MARK: - Initialisers
     
-    init() {
+    init(viewModel: MainScreenViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -36,8 +32,8 @@ class MainScreenViewController: UIViewController {
         let view = MainScreenView()
         view.delegate = self
         self.view = view
-        view.selectItems = selectItems
-        view.configurate(mainResult: mainResult)
+        view.selectItems = viewModel.selectItems
+        view.configurate(mainResult: viewModel.mainResult)
         
     }
     
@@ -45,7 +41,7 @@ class MainScreenViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setNavigationBar()
-        getMainScreen()
+        self.viewModel.getMainScreen(viewController: self)
         
     }
     
@@ -55,7 +51,7 @@ class MainScreenViewController: UIViewController {
         tabBarController?.tabBar.isHidden = false
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-
+    
     // MARK: - Privat func
     
     private func setNavigationBar() {
@@ -65,29 +61,13 @@ class MainScreenViewController: UIViewController {
     
     private func getFilterMenu() {
         let child = FilterOptionsViewController()
-                child.transitioningDelegate = transition
-                child.modalPresentationStyle = .custom
-
-                present(child, animated: true)
+        child.transitioningDelegate = transition
+        child.modalPresentationStyle = .custom
+        
+        present(child, animated: true)
         
     }
     
-    private func getMainScreen() {
-        let main = requestFactory.makeMainRequestFactory()
-        main.getMain() { [weak self] response in
-            switch response.result {
-            case .success(let result):
-                print(result)
-                self?.mainResult = result
-                DispatchQueue.main.async {
-                    self?.loadView()
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
-
     // MARK: - Actions
     @objc func filterTapped (sender: UIBarButtonItem) {
         getFilterMenu()
@@ -97,7 +77,7 @@ class MainScreenViewController: UIViewController {
 
 extension MainScreenViewController: MainScreenViewProtocol {
     func buyHotSalesButtonTapped(_ index: Int) {
-        let homeStore = mainResult.homeStore[index]
+        let homeStore = viewModel.mainResult.homeStore[index]
         
         let item = AppBasketItem(productId: homeStore.id,
                                  productName: homeStore.title,
@@ -111,6 +91,5 @@ extension MainScreenViewController: MainScreenViewProtocol {
     func showProductDitail() {
         navigationController?.pushViewController(ProductDetailsViewController(), animated: true)
     }
-    
     
 }
