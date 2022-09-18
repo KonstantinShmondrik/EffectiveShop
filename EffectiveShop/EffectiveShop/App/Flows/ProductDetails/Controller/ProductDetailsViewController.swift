@@ -14,26 +14,15 @@ class ProductDetailsViewController: UIViewController {
     private var productDetailsView: ProductDetailsView {
         return self.view as! ProductDetailsView
     }
-    
     private let requestFactory = RequestFactory()
-    
-    
-    var productDitailResult: ProductDitailResult = ProductDitailResult(cpu: "",
-                                                                       camera: "", capacity: [],
-                                                                       color: [],
-                                                                       id: "",
-                                                                       images: [],
-                                                                       isFavorites: false,
-                                                                       price: 0,
-                                                                       rating: 0.0,
-                                                                       sd: "",
-                                                                       ssd: "",
-                                                                       title: "")
+    private let viewModel: ProductDetailsViewModel
     
     // MARK: - Initialisers
     
-    init() {
+    init(viewModel: ProductDetailsViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -48,7 +37,7 @@ class ProductDetailsViewController: UIViewController {
         self.view = view
         view.delegate = self
         tabBarController?.tabBar.isHidden = true
-        getProductDitail()
+        self.viewModel.getProductDitail(viewController: self)
         
     }
     
@@ -56,7 +45,7 @@ class ProductDetailsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = AppColor.backgraund
         setNavigationBar()
-        productDetailsView.configurate(productDitailResult: productDitailResult)
+        productDetailsView.configurate(productDitailResult: self.viewModel.productDitailResult)
         
     }
     
@@ -82,23 +71,6 @@ class ProductDetailsViewController: UIViewController {
         //        navigationController?.text = "Product Details"
     }
     
-    private func getProductDitail() {
-        
-        let productDitails = requestFactory.makeProductDetailsRequestFactory()
-        productDitails.getProductDetails() { [weak self] response in
-            switch response.result {
-            case .success(let result):
-                print(result)
-                self?.productDitailResult = result
-                DispatchQueue.main.async {
-                    self?.viewDidLoad()
-                    
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
     
     // MARK: - Actions
     @objc func toCartTapped (sender: UIBarButtonItem) {
@@ -109,17 +81,14 @@ class ProductDetailsViewController: UIViewController {
 
 extension ProductDetailsViewController: ProductDetailsViewProtocol {
     func buyButtonTapped() {
-        let item = AppBasketItem(productId: Int(productDitailResult.id ?? ""),
-                                 productName: productDitailResult.title,
-                                 price: productDitailResult.price,
-                                 picUrl: productDitailResult.images.first)
+        let item = AppBasketItem(productId: Int(self.viewModel.productDitailResult.id ?? ""),
+                                 productName: self.viewModel.productDitailResult.title,
+                                 price: self.viewModel.productDitailResult.price,
+                                 picUrl: self.viewModel.productDitailResult.images.first)
         
         AppBasket.shared.items.append(item)
         self.tabBarController?.viewDidLoad()
     }
-    
-    
-    
 }
 
 
