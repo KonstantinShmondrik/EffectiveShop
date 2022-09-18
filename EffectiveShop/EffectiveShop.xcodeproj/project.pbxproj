@@ -88,6 +88,7 @@
 		00B266DD28B925180018D510 /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266DC28B925180018D510 /* AppLabel.swift */; };
 		00B266DE28B925180018D510 /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B266DC28B925180018D510 /* AppLabel.swift */; };
 		00FCC6AD28D63F21000BF4B7 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCC6AC28D63F21000BF4B7 /* MainScreenViewModel.swift */; };
+		00FCC6B028D77FF7000BF4B7 /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCC6AF28D77FF7000BF4B7 /* ProductDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +177,7 @@
 		00B266D928B9226C0018D510 /* MarkPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Medium.ttf"; sourceTree = "<group>"; };
 		00B266DC28B925180018D510 /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
 		00FCC6AC28D63F21000BF4B7 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		00FCC6AF28D77FF7000BF4B7 /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -664,6 +666,7 @@
 			children = (
 				008F7FC728BD240A0092D1F6 /* Controller */,
 				00ADE45128BE138800583289 /* View */,
+				00FCC6AE28D77FAD000BF4B7 /* ViewModel */,
 			);
 			path = ProductDetails;
 			sourceTree = "<group>";
@@ -725,6 +728,14 @@
 			isa = PBXGroup;
 			children = (
 				00FCC6AC28D63F21000BF4B7 /* MainScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		00FCC6AE28D77FAD000BF4B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				00FCC6AF28D77FF7000BF4B7 /* ProductDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -905,6 +916,7 @@
 				00564AF628BA2DD700709892 /* MainScreenView.swift in Sources */,
 				00ADE45728BE155C00583289 /* HederProductDetailsView.swift in Sources */,
 				00564B0F28BB85B000709892 /* HotSalesItemsCell.swift in Sources */,
+				00FCC6B028D77FF7000BF4B7 /* ProductDetailsViewModel.swift in Sources */,
 				00B266BF28B7CA170018D510 /* UserViewController.swift in Sources */,
 				00A88D6928C0C06A004F6452 /* FooterCartTableViewCell.swift in Sources */,
 				00564AF828BA30BC00709892 /* UICollectionView+RegisterCell.swift in Sources */,

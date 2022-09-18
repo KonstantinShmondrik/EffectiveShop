@@ -89,7 +89,7 @@ extension MainScreenViewController: MainScreenViewProtocol {
     }
     
     func showProductDitail() {
-        navigationController?.pushViewController(ProductDetailsViewController(), animated: true)
+        navigationController?.pushViewController(ProductDetailsViewController(viewModel: ProductDetailsViewModel()), animated: true)
     }
     
 }
