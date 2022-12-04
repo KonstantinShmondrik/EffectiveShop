@@ -21,10 +21,7 @@ class CartTableViewCell: UITableViewCell {
     var count: Int?
     var onTappedBuyButton: ((String) -> Void)?
     
-    
     // MARK: - Outlet
-    
-    
     private(set) lazy var productNameLabel: UILabel = {
         let label = AppLabel(alignment: .left,
                              fontSize: AppFont.markProFont(ofSize: 20, weight: .medium),
@@ -92,17 +89,15 @@ class CartTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     // MARK: - UI
-    
     private func configureUI() {
         self.backgroundColor = .white
         
         [self.productNameLabel,
-            self.picImage,
-            self.unitPriceLabel,
-            self.totalPriceLabel,
-            self.deleteButton,
+         self.picImage,
+         self.unitPriceLabel,
+         self.totalPriceLabel,
+         self.deleteButton,
          self.buyButton
         ].forEach() {
             self.contentView.addSubview($0)
@@ -114,7 +109,7 @@ class CartTableViewCell: UITableViewCell {
             self?.count = Int(count)
             print(count)
         }
-
+        
         NSLayoutConstraint.activate([
             self.productNameLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 20),
             self.productNameLabel.leadingAnchor.constraint(equalTo: self.picImage.trailingAnchor, constant: 20),
@@ -168,7 +163,7 @@ class CartTableViewCell: UITableViewCell {
         } else {
             picImage.image = UIImage(named: "noPhoto")
         }
-       
+        
     }
     
     // MARK: - Actions

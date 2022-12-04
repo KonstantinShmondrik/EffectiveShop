@@ -31,9 +31,15 @@ class ProductDetailsViewController: UIViewController {
     
     // MARK: - Lifecycle
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isTranslucent = false
+        tabBarController?.tabBar.isHidden = true
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
     override func loadView() {
         let view = ProductDetailsView()
-        //        view.delegate = self
         self.view = view
         view.delegate = self
         tabBarController?.tabBar.isHidden = true
@@ -46,7 +52,6 @@ class ProductDetailsViewController: UIViewController {
         view.backgroundColor = AppColor.backgraund
         setNavigationBar()
         productDetailsView.configurate(productDitailResult: self.viewModel.productDitailResult)
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -60,23 +65,21 @@ class ProductDetailsViewController: UIViewController {
     // MARK: - Privat func
     
     private func setNavigationBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "bag"), style: .done, target: self, action: #selector(toCartTapped))
-        navigationItem.rightBarButtonItem?.tintColor = AppColor.orange
-        navigationController?.navigationBar.isTranslucent = false
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "cartButton"), style: .done, target: self, action: #selector(toCartTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "backButton"), style: .done, target: self, action: #selector(toBack))
         navigationItem.title = "Product Details"
+        navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.prefersLargeTitles = false
-        //        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter"), style: .done, target: self, action: #selector(filterTapped))
-        //        navigationItem.leftBarButtonItem?.tintColor = AppColor.darkBlue
-        
-        //        navigationController?.text = "Product Details"
     }
-    
     
     // MARK: - Actions
     @objc func toCartTapped (sender: UIBarButtonItem) {
-        self.tabBarController?.selectedIndex = 1
+        self.navigationController?.pushViewController(MyCartViewController(viewModel: MyCartViewModel()), animated: true)
     }
     
+    @objc func toBack() {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension ProductDetailsViewController: ProductDetailsViewProtocol {

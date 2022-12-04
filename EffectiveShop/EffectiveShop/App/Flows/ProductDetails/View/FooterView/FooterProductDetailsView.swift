@@ -84,6 +84,20 @@ class FooterProductDetailsView: UIView {
         return button
     }()
     
+    private(set) lazy var segmentControl: UISegmentedControl = {
+        let items = ["Shop", "Details", "Features"]
+        let segmentControl = UISegmentedControl(items: items)
+        segmentControl.selectedSegmentIndex = 0
+        segmentControl.addUnderlineForSelectedSegment()
+//        segmentControl.addTarget(self, action: #selector(segmentedControlDidChange), for: .allTouchEvents)
+        
+        segmentControl.addTarget(self, action: #selector(segmentedControlDidChange(_:)), for: .valueChanged)
+        segmentControl.addTarget(self, action: #selector(segmentedControlDidChange(_:)), for: .touchUpInside)
+       
+        segmentControl.translatesAutoresizingMaskIntoConstraints = false
+        return segmentControl
+    }()
+    
     private(set) lazy var addToCartButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .white
@@ -225,9 +239,7 @@ extension FooterProductDetailsView {
         cosmoView.rating = data.rating ?? 0.0
         selectedColorView.configurate(colors: data.color)
         selectedCopacityView.configurate(copacityes: data.capacity)
-    
         }
-    
 }
 
 // MARK: - Actions
@@ -235,23 +247,18 @@ extension FooterProductDetailsView {
     
     @objc func favoritPressed() {
         print ("Press button to favorit")
-        
     }
     @objc func addCartButtonPressed() {
         delegate?.buyButtonTapped()
-        
     }
-    
 }
-
-
 
 // MARK: - Configure UI
 private extension FooterProductDetailsView {
     
     func addSubviewsContent() {
         addSubview(conteinerView)
-        conteinerView.addSubviews([hederLabel, cosmoView, favoritButton, footerLabel, addToCartButton, CPUImageView, cameraImageView, ssdImageView, sdImageView, CPULabel, cameraLabel, ssdLabel, sdLabel, selectedColorView, selectedCopacityView])
+        conteinerView.addSubviews([hederLabel, cosmoView, segmentControl, favoritButton, footerLabel, addToCartButton, CPUImageView, cameraImageView, ssdImageView, sdImageView, CPULabel, cameraLabel, ssdLabel, sdLabel, selectedColorView, selectedCopacityView])
     }
     
     func configureUI() {
@@ -272,6 +279,13 @@ private extension FooterProductDetailsView {
             $0.leading.equalTo(conteinerView.snp.leading).offset(38)
         }
         
+        segmentControl.snp.makeConstraints {
+            $0.top.equalTo(hederLabel.snp.bottom).offset(50)
+            $0.trailing.equalTo(conteinerView).offset(-30)
+            $0.leading.equalTo(conteinerView).offset(30)
+            $0.height.equalTo(33)
+        }
+        
         favoritButton.snp.makeConstraints {
             $0.top.equalTo(conteinerView).offset(28)
             $0.trailing.equalTo(conteinerView).offset(-37)
@@ -280,7 +294,7 @@ private extension FooterProductDetailsView {
         }
         
         CPUImageView.snp.makeConstraints {
-            $0.top.equalTo(hederLabel.snp.bottom).offset(80)
+            $0.top.equalTo(hederLabel.snp.bottom).offset(100)
             $0.width.equalTo(28)
             $0.height.equalTo(28)
             $0.leading.equalTo(conteinerView.snp.leading).offset(45)
@@ -330,7 +344,6 @@ private extension FooterProductDetailsView {
         footerLabel.snp.makeConstraints {
             $0.top.equalTo(CPULabel.snp.bottom).offset(29)
             $0.leading.equalTo(conteinerView).offset(30)
-            
         }
         
         selectedColorView.snp.makeConstraints {
@@ -338,7 +351,6 @@ private extension FooterProductDetailsView {
             $0.leading.equalTo(conteinerView).offset(38)
             $0.width.equalTo(120)
             $0.height.equalTo(40)
-            
         }
         
         selectedCopacityView.snp.makeConstraints {
@@ -346,7 +358,6 @@ private extension FooterProductDetailsView {
             $0.leading.equalTo(selectedColorView.snp.trailing).offset(10)
             $0.trailing.equalTo(conteinerView).offset(-37)
             $0.height.equalTo(40)
-            
         }
         
         addToCartButton.snp.makeConstraints {
@@ -354,13 +365,13 @@ private extension FooterProductDetailsView {
             $0.trailing.equalTo(conteinerView).offset(-30)
             $0.leading.equalTo(conteinerView).offset(30)
             $0.height.equalTo(55)
-            
         }
-        
-        
     }
 }
 
-
-
-
+// MARK: - SegmentedControlDidChange
+private extension FooterProductDetailsView {
+    @objc func segmentedControlDidChange(_ sender: UISegmentedControl) {
+        segmentControl.changeUnderlinePosition()
+    }
+}

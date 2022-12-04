@@ -30,6 +30,7 @@
 		00564B2828BCBEB400709892 /* CGPoint+Velocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B2728BCBEB400709892 /* CGPoint+Velocity.swift */; };
 		00564B2D28BCBFB300709892 /* FilterOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B2C28BCBFB300709892 /* FilterOptionsViewController.swift */; };
 		00564B2F28BCBFCB00709892 /* FilterOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00564B2E28BCBFCB00709892 /* FilterOptionsView.swift */; };
+		0082680D293CFA7D00034D22 /* UISegmentedControl+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0082680C293CFA7D00034D22 /* UISegmentedControl+extension.swift */; };
 		008F7FC628BD0E310092D1F6 /* MenuItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008F7FC528BD0E310092D1F6 /* MenuItemsTableViewCell.swift */; };
 		0091B15E28BF7A280025D2EF /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 0091B15D28BF7A280025D2EF /* Cosmos */; };
 		0091B16128BF7E380025D2EF /* SelectedColorItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091B16028BF7E380025D2EF /* SelectedColorItemsCell.swift */; };
@@ -124,6 +125,7 @@
 		00564B2728BCBEB400709892 /* CGPoint+Velocity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Velocity.swift"; sourceTree = "<group>"; };
 		00564B2C28BCBFB300709892 /* FilterOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptionsViewController.swift; sourceTree = "<group>"; };
 		00564B2E28BCBFCB00709892 /* FilterOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptionsView.swift; sourceTree = "<group>"; };
+		0082680C293CFA7D00034D22 /* UISegmentedControl+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+extension.swift"; sourceTree = "<group>"; };
 		008F7FC528BD0E310092D1F6 /* MenuItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsTableViewCell.swift; sourceTree = "<group>"; };
 		0091B16028BF7E380025D2EF /* SelectedColorItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedColorItemsCell.swift; sourceTree = "<group>"; };
 		0091B16428BF7EE30025D2EF /* SelectedCopacityItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCopacityItemsCell.swift; sourceTree = "<group>"; };
@@ -541,6 +543,7 @@
 				00564B2728BCBEB400709892 /* CGPoint+Velocity.swift */,
 				0091B16828BFACC30025D2EF /* UIColor+HEX.swift */,
 				00A88D6A28C0EB26004F6452 /* Int+formattedString.swift */,
+				0082680C293CFA7D00034D22 /* UISegmentedControl+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -908,6 +911,7 @@
 				00564B2028BCBE1900709892 /* PresentationController.swift in Sources */,
 				00564B1E28BCBDFD00709892 /* TransitionDirection.swift in Sources */,
 				00564B2628BCBE8300709892 /* DismissAnimation.swift in Sources */,
+				0082680D293CFA7D00034D22 /* UISegmentedControl+extension.swift in Sources */,
 				00FCC6AD28D63F21000BF4B7 /* MainScreenViewModel.swift in Sources */,
 				00FCC6B328D78509000BF4B7 /* MyCartViewModel.swift in Sources */,
 				0091B16728BF822F0025D2EF /* SelectedColorView.swift in Sources */,

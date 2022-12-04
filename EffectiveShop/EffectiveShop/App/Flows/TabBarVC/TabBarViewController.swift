@@ -40,9 +40,7 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         let tabBarItemCart = UITabBarItem(title: nil,
                                               image: UIImage(systemName: "bag")?.withRenderingMode(UIImage.RenderingMode.automatic),
                                               selectedImage: UIImage(systemName: "bag.fill")?.withRenderingMode(UIImage.RenderingMode.automatic))
-        
-        
-        
+
         cartVC.tabBarItem = tabBarItemCart
         configuredNavigationController(navVC: cartVC)
         
@@ -55,7 +53,6 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         favoritVC.tabBarItem = tabBarItemFavorit
         configuredNavigationController(navVC: favoritVC)
         
-        
         let userVC = UINavigationController(rootViewController: UserViewController())
         
         let tabBarItemUser = UITabBarItem(title: nil,
@@ -66,9 +63,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         configuredNavigationController(navVC: userVC)
        
         self.viewControllers = [mainVC, cartVC, favoritVC, userVC]
-        
-        setBadgeValue(barItem: tabBarItemCart, valu: AppBasket.shared.items.count)
     
+        setBadgeValue(barItem: tabBarItemCart, valu: AppBasket.shared.items.count)
     }
     
     private func configuredNavigationController (navVC: UINavigationController) {

@@ -40,8 +40,7 @@ class MyCartViewController: UITableViewController {
         tableView.delegate = self
         tableView.backgroundColor = AppColor.darkBlue
         tableView.rowHeight = UITableView.automaticDimension
-        navigationItem.title = "My Cart"
-        
+        setNavigationBar()
     }
     
     // MARK: - Table view data source
@@ -67,18 +66,13 @@ class MyCartViewController: UITableViewController {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: CartTableViewCell.reuseIdentifier) as? CartTableViewCell
             let cellItem = viewModel.cartResult.basket[indexPath.row]
-            
-            
             cell?.configure(image: cellItem.images,
                             unitPrice: cellItem.price,
                             title: cellItem.title,
                             count: cellItem.count)
-            
             cell?.delegate = self
             cell?.row = indexPath.row
             cell?.backgroundColor = AppColor.darkBlue
-            
-            
             
             return cell ?? UITableViewCell()
         }
@@ -90,15 +84,29 @@ class MyCartViewController: UITableViewController {
         footer.configure(count: viewModel.cartResult.basket.count,
                          delivery: viewModel.cartResult.delivery ?? "",
                          cart: viewModel.cartResult.basket)
-        
         footer.delegate = self
-        
         footer.backgroundColor = AppColor.darkBlue
         
         return footer
         
     }
+    // MARK: - Privat func
+    private func setNavigationBar() {
+        navigationItem.title = "My Cart"
+        navigationController?.toolbar.backgroundColor = AppColor.backgraund
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "mapButton"), style: .done, target: self, action: #selector(toMapTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "backButton"), style: .done, target: self, action: #selector(toBack))
+        
+    }
     
+    // MARK: - Actions
+    @objc func toMapTapped (sender: UIBarButtonItem) {
+        print("go to Map")
+    }
+    
+    @objc func toBack() {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 //MARK: - CartTableViewCellProtocol
@@ -125,10 +133,8 @@ extension MyCartViewController: CartTableViewCellProtocol {
     }
 }
 
-
 extension MyCartViewController: FooterBasketTableViewCellProtocol {
     func pressPayButton() {
-        
         let alert = UIAlertController(title: "My Cart", message: "Thanks for your purchase!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: {_ in
             UIView.animate(withDuration: 0.2) {

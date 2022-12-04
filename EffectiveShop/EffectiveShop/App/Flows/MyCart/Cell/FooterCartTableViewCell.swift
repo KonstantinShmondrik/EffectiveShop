@@ -55,7 +55,6 @@ class FooterCartTableViewCell: UITableViewHeaderFooterView {
         return label
     }()
     
-    
     private(set) lazy var payButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = AppColor.orange
